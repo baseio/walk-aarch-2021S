@@ -1,0 +1,130 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+  font: 13px/1.65em "Univers LT W02 55 Roman", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Univers LT W02 65 Bold";
+  font-weight: 700;
+}
+
+a, a:visited {
+  color: #000;
+}
+a:hover {
+  color: #09f;
+}
+
+.copy > h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(aarch.svg);
+  background-repeat: no-repeat;
+}
+
+#app {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app, .logo, .menu, .modetoggle, .copy, .projects {
+  /* border: 1px solid; */
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  width: 20vw;
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+.menu > a {
+  text-decoration: none;
+}
+
+.modetoggle {
+  width: 20vw;
+}
+
+.copy {
+  width: 60vw;
+  left: 20vw;
+  user-select: text;
+}
+
+.project {
+  background-color: #09f;
+  min-width: 100px;
+  height: 100px;
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 20px;
+}
+
+.projects {
+  background-color: #cccccccc;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.projects.online {
+  align-items: flex-end;
+  overflow-x: scroll;
+}
+
+.projects.offline {
+  background-color: #000;
+}
+.projects.offline > * {
+  display: none;
+}
+
+.projects.ongrid {
+  margin-left: 20vw;
+  width: calc(100% - 20vw);
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.projects.offgrid {
+  position: relative;
+  overflow-y: scroll;
+}
+.projects.offgrid > .project {
+  position: absolute;
+}
