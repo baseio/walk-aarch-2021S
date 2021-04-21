@@ -18,7 +18,8 @@
   var render_projects = () => {
     let html = "";
     for (let i = 0; i < 50; i++) {
-      html += `<div class="project">P-${i}</div>`;
+      const h = 50 + Math.random() * 200 + "px";
+      html += `<div class="project" style="height:${h}">P-${i}</div>`;
     }
     PROJECTS_ELM.innerHTML = html;
   };
