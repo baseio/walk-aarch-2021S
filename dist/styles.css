@@ -33,76 +33,57 @@ a:hover {
   text-transform: uppercase;
 }
 
-.logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background-image: url(aarch.svg);
-  background-repeat: no-repeat;
-}
-
-#app {
-  position: absolute;
-  top:0; left:0; right:0; bottom:0;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.app, .logo, .menu, .modetoggle, .copy, .projects {
-  /* border: 1px solid; */
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-}
 
 .menu {
-  width: 20vw;
   user-select: none;
   pointer-events: all;
   cursor: pointer;
 }
-.menu > a {
-  text-decoration: none;
-}
-
-.modetoggle {
-  width: 20vw;
-}
 
 .copy {
-  width: 60vw;
-  left: 20vw;
   user-select: text;
 }
 
-.project {
-  background-color: #09f;
-  min-width: 100px;
-  height: 100px;
-  flex: 1;
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin: 20px;
+.modetoggle {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
 }
+/**/
+
 
 .projects {
-  background-color: #cccccccc;
-  width: 100%;
+  /* background-color: #cccccccc; */
   display: flex;
   flex-direction: row;
-  flex:1;
-  
+  flex:1;  
   justify-content: space-between;
   align-content: space-between;
 }
 
+.projects::-webkit-scrollbar {
+  width: 11px;
+}
+
+.projects::-webkit-scrollbar-track {
+  background: none;
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+
+
+
+
+
+
 .projects.online {
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: baseline;
   overflow-x: scroll;
 }
 
@@ -114,17 +95,48 @@ a:hover {
 }
 
 .projects.ongrid {
-  margin-left: 20vw;
-  width: calc(100% - 20vw);
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow-y: auto;
+  margin-bottom: -40px;
+  overflow-y: overlay;
+  overflow-x: hidden;
 }
 
 .projects.offgrid {
-  position: relative;
-  overflow-y: scroll;
+  overflow-y: overlay;
 }
+
+/* full width */
+.projects.online, .projects.offline, .projects.offgrid {
+  margin-left: -200px;
+}
+
+
+/**/
+
+
+.project {
+  /* background-color: #09f; */
+  min-width: 100px;
+  /* height: 100px; */
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 20px;
+  margin-left: 0;
+  margin-right: 40px;
+}
+
+.project .project-image {
+  background-color: tomato;
+  width: 100px;
+}
+.project .project-meta {
+  /* color: #f00; */
+}
+
 .projects.offgrid > .project {
-  position: absolute;
+  /* position: absolute; */
+  /*margin: 0;*/
 }

@@ -1,6 +1,6 @@
 {
   "name": "walk-aarch-2021S",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "",
   "main": "students.js",
   "directories": {
@@ -8,9 +8,16 @@
   },
   "scripts": {
     "watch": "watchexec --exts js,css,html -i /*bundle.js npm run _build",
+    "serve": "cd dist && here",
     "_build": "esbuild src/index.js --target=es2016 --bundle --outfile=dist/bundle.js"
   },
   "keywords": [],
   "author": "Jørgen Skogmo <js@dearstudio.dk>",
-  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+  "devDependencies": {
+    "stupid-sheets": "0.0.3"
+  },
+  "dependencies": {
+    "macy": "^2.5.1"
+  }
 }
