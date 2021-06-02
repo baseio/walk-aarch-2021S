@@ -10,6 +10,7 @@ body {
   user-select: none;
   pointer-events: all;
   cursor: pointer;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -21,6 +22,31 @@ h6 {
   font-weight: 700;
 }
 
+* {
+  background-repeat: no-repeat;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+strong {
+  font-family: 'Univers LT W02 65 Bold';
+  font-weight: 700;
+}
+
 a, a:visited {
   color: #000;
 }
@@ -28,12 +54,57 @@ a:hover {
   color: #09f;
 }
 
-.copy > h2 {
-  margin-top: 0;
-  text-transform: uppercase;
+
+.logo {
+  float: right;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(assets/aarch.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr 100fr 40px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+  margin: 20px;
+  height: calc(100vh - 40px);
 }
 
 
+
+
+
+.themefilter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #00F;
+  margin-top: -30px;
+}
+.themefilter > span {
+  color: #000;
+  background-image: url(assets/x-3-000.svg);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.searchfield {
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  width: 100%;
+}
+
+
+/**/
 .menu {
   user-select: none;
   pointer-events: all;
@@ -42,6 +113,16 @@ a:hover {
 
 .copy {
   user-select: text;
+  max-height: calc(100vh - 80px);
+  overflow-y: scroll;
+  padding-right: 40px;
+}
+.copy > h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.copy > img {
+  width: 230px;
 }
 
 .modetoggle {
@@ -53,15 +134,14 @@ a:hover {
 
 
 .projects {
-  /* background-color: #cccccccc; */
   display: flex;
   flex-direction: row;
-  flex:1;  
-  justify-content: space-between;
-  align-content: space-between;
+  flex:1;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
-.projects::-webkit-scrollbar {
+/* .projects::-webkit-scrollbar {
   width: 11px;
 }
 
@@ -73,7 +153,7 @@ a:hover {
   background-color: #000;
   border-radius: 20px;
   border: 3px solid #fff;
-}
+} */
 
 
 
@@ -82,7 +162,7 @@ a:hover {
 
 
 .projects.online {
-  /* align-items: flex-end; */
+  align-self: flex-end;
   align-items: baseline;
   overflow-x: scroll;
 }

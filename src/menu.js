@@ -63,14 +63,22 @@ export const buildMenu = (selector) => {
 
 	document.querySelectorAll(selector + ` [data-menu-action="toggle"]`).forEach( el => {
 		el.addEventListener('click', () => {
-			
-			//unselect others, select self
-			document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
-			el.classList.add('selected');
 
-			// collapse others, open self
-			document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
-			document.querySelector(`#${el.getAttribute('data-menu-key')}`).classList.add('open');
+			if( el.classList.contains('selected') ){
+				el.classList.remove('selected');
+				document.querySelector(`#${el.getAttribute('data-menu-key')}`).classList.remove('open');
+				return;
+			}else{
+			
+				//unselect others, select self
+				document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
+				el.classList.add('selected');
+
+				// collapse others, open self
+				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
+				document.querySelector(`#${el.getAttribute('data-menu-key')}`).classList.add('open');
+			
+			}
 
 		})
 	})
