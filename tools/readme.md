@@ -6,4 +6,7 @@ Summer graduation, 2021
 
 - [ ] offgrid
 - [ ] mobile
+- [ ] browser tests
+- [ ] analytics koder
+- [ ] slugs
 - [ ] concat css
