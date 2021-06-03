@@ -7,6 +7,8 @@ Summer graduation, 2021
 - [ ] offgrid
 - [ ] mobile
 - [ ] browser tests
-- [ ] analytics koder
-- [ ] slugs
-- [ ] concat css
+
+- [ ] analytics koder: await Lars
+- [ ] slugs: await Anne?
+
+- [ ] concat css, optimize build

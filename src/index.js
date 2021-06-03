@@ -7,9 +7,10 @@ import {nl2br} from './utils.js';
 import {buildMenu} from './menu.js';
 
 // import {setRandomPos} from './layout-offgrid.js'
-import {renderMasonry, removeMasonry} from './layout-offgrid-bricklayer.js'
+import {renderOffgrid, cleanupOffgrid} from './layout-offgrid2.js'
+// import {renderMasonry, removeMasonry} from './layout-offgrid-bricklayer.js'
 
-const MODE = {onoff:true, gridline:true};
+const MODE = {onoff:false, gridline:true};
 const PROJECTS_ELM = document.querySelector('.projects');
 let MOUSE_PRESSED = false;
 let SEARCH_STRING = '';
@@ -143,20 +144,20 @@ const render_projects = (show=true) => {
       const match = search.indexOf(SEARCH_STRING) > -1
 
       if( match ){
-        html += `<div class="project" style="width:200px;">
+        html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" />
           <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-          ${s.title}<br />
+          <div class="project-title">${s.title}<br /></div>
           [${i},${s.id}, ${s.theme}]</div>
         </div>`
       }
     
     }else{
 
-      html += `<div class="project" style="width:200px;">
+      html += `<div class="project">
         <img class="project-image" src="images/${s.id}.jpg" />
         <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-        ${s.title}<br />
+        <!-- <div class="project-title">${s.title}<br /></div> -->
         [${i},${s.id}, ${s.theme}]</div>
       </div>`
 
@@ -172,7 +173,8 @@ const render_toggle = () => {
 
 const render = () => {
   
-  removeMasonry()
+  // removeMasonry()
+  cleanupOffgrid('.projects')
 
   const className = modeToClass()
 
@@ -184,7 +186,8 @@ const render = () => {
     //   el.style.left = Math.random() * 1000 + 'px'
     // })
     // setRandomPos( document.querySelectorAll('.projects .project') )
-    renderMasonry( '.projects' );
+    // renderMasonry( '.projects' );
+    renderOffgrid('.projects');
 
   }
   console.log('render mode:', className);
