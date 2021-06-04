@@ -1,15 +1,14 @@
 .menu {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 30px;
+  line-height: 140%;
   font-weight: 600;
   color:  #000;
   white-space: nowrap;
 }
 
-.menu .sml span{
-  font-size: 15px;
-  line-height: 23px;
-  /* background-color: #d6d6d6; */
+.menu .sml {
+  font-size: 17px;
+  line-height: 170%;
   margin-bottom: 6px;
   padding: 0px 3px;
 }
@@ -22,11 +21,9 @@
 .menu .grpc {
   height: 0;
   overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.2s;
 }
 .menu .grpc.open {
   height: unset;
   overflow: unset;
-  opacity: 1;
+  margin: 30px 0px;
 }

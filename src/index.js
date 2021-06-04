@@ -10,7 +10,7 @@ import {buildMenu} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid2.js'
 // import {renderMasonry, removeMasonry} from './layout-offgrid-bricklayer.js'
 
-const MODE = {onoff:false, gridline:true};
+const MODE = {onoff:true, gridline:true};
 const PROJECTS_ELM = document.querySelector('.projects');
 let MOUSE_PRESSED = false;
 let SEARCH_STRING = '';
@@ -20,6 +20,7 @@ const onHashChanged = () => {
   const h = window.location.hash
   console.log('onHashChanged', h);
 
+  cleanupOffgrid('.projects')
   
   if( h.indexOf('#page:') === 0 ){
     SEARCH_STRING = ''
@@ -32,6 +33,11 @@ const onHashChanged = () => {
     MODE.gridline = true
     render_projects();
     render_search();
+
+  }else if( h.indexOf('#list') === 0 ){
+    render_projects(false);
+    render_list( h.split('#list:')[1] )
+  
   }else{
     SEARCH_STRING = ''
     render_projects();
@@ -76,6 +82,25 @@ const setup = () => {
   }
 }
 
+const render_list = (list) => {
+  let listHeadline = list
+  let listContent = ''
+
+  if( list === 'architects' ){
+    listHeadline = 'Architects'
+    listContent = ''
+    DATA.forEach( s => {
+      listContent += `<a href="" style="width:45%;display:inline-block;">${s.firstname} ${s.surname}</a>`
+    })
+  }
+  
+  
+  let html = `
+    <h2>${listHeadline}</h2>
+    ${listContent}
+  `
+  document.querySelector('.copy').innerHTML = html
+}
 
 const render_page = (page) => {
 
@@ -147,8 +172,8 @@ const render_projects = (show=true) => {
         html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" />
           <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-          <div class="project-title">${s.title}<br /></div>
-          [${i},${s.id}, ${s.theme}]</div>
+            <div class="project-title">${s.title}</div>
+          </div>
         </div>`
       }
     
@@ -157,8 +182,8 @@ const render_projects = (show=true) => {
       html += `<div class="project">
         <img class="project-image" src="images/${s.id}.jpg" />
         <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-        <!-- <div class="project-title">${s.title}<br /></div> -->
-        [${i},${s.id}, ${s.theme}]</div>
+          <!-- <div class="project-title">${s.title}</div> -->
+        </div>
       </div>`
 
     }

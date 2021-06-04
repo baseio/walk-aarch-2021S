@@ -973,7 +973,7 @@ STAY ONLINE.
 
   // src/menu.js
   var menudata = [
-    ["Architects", "architects", null],
+    ["Architects", "list:architects", null],
     [
       "Categories",
       "categories",
@@ -1019,6 +1019,9 @@ STAY ONLINE.
       el.addEventListener("click", () => {
         document.querySelectorAll(selector + " .selected").forEach((el2) => el2.classList.remove("selected"));
         el.classList.add("selected");
+        if (el.parentElement.classList.contains("grpc")) {
+          el.parentElement.previousElementSibling.classList.add("selected");
+        }
         if (!el.classList.contains("sml")) {
           document.querySelectorAll(selector + " .grpc.open").forEach((el2) => el2.classList.remove("open"));
         }
@@ -1066,13 +1069,14 @@ STAY ONLINE.
 
   // src/index.js
   console.log("students", students_default);
-  var MODE = {onoff: false, gridline: true};
+  var MODE = {onoff: true, gridline: true};
   var PROJECTS_ELM = document.querySelector(".projects");
   var MOUSE_PRESSED = false;
   var SEARCH_STRING = "";
   var onHashChanged = () => {
     const h = window.location.hash;
     console.log("onHashChanged", h);
+    cleanupOffgrid(".projects");
     if (h.indexOf("#page:") === 0) {
       SEARCH_STRING = "";
       render_projects(false);
@@ -1083,6 +1087,9 @@ STAY ONLINE.
       MODE.gridline = true;
       render_projects();
       render_search();
+    } else if (h.indexOf("#list") === 0) {
+      render_projects(false);
+      render_list(h.split("#list:")[1]);
     } else {
       SEARCH_STRING = "";
       render_projects();
@@ -1121,6 +1128,22 @@ STAY ONLINE.
     if (h.indexOf("#cat:") === 0) {
       document.querySelector('div[data-menu-key="categories"]').click();
     }
+  };
+  var render_list = (list) => {
+    let listHeadline = list;
+    let listContent = "";
+    if (list === "architects") {
+      listHeadline = "Architects";
+      listContent = "";
+      students_default.forEach((s) => {
+        listContent += `<a href="" style="width:45%;display:inline-block;">${s.firstname} ${s.surname}</a>`;
+      });
+    }
+    let html = `
+    <h2>${listHeadline}</h2>
+    ${listContent}
+  `;
+    document.querySelector(".copy").innerHTML = html;
   };
   var render_page = (page) => {
     let html = `
@@ -1174,16 +1197,16 @@ STAY ONLINE.
           html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" />
           <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-          <div class="project-title">${s.title}<br /></div>
-          [${i},${s.id}, ${s.theme}]</div>
+            <div class="project-title">${s.title}</div>
+          </div>
         </div>`;
         }
       } else {
         html += `<div class="project">
         <img class="project-image" src="images/${s.id}.jpg" />
         <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
-        <!-- <div class="project-title">${s.title}<br /></div> -->
-        [${i},${s.id}, ${s.theme}]</div>
+          <!-- <div class="project-title">${s.title}</div> -->
+        </div>
       </div>`;
       }
     });

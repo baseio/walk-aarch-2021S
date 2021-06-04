@@ -1,5 +1,5 @@
 const menudata = [
-	['Architects', 'architects', null],
+	['Architects', 'list:architects', null],
 	['Categories', 'categories',
 		[
 			['New Commons', 'cat:new-commons', null],
@@ -52,6 +52,11 @@ export const buildMenu = (selector) => {
 			document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
 			el.classList.add('selected');
 
+			// select parent if we're a submenu item
+			if( el.parentElement.classList.contains('grpc') ){
+				el.parentElement.previousElementSibling.classList.add('selected')
+			}
+			
 			if( !el.classList.contains('sml') ){
 				// we're not a submenu-item, so collapse others
 				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
@@ -73,6 +78,8 @@ export const buildMenu = (selector) => {
 				//unselect others, select self
 				document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
 				el.classList.add('selected');
+
+				
 
 				// collapse others, open self
 				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
