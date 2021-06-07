@@ -176,7 +176,7 @@ const render_projects = (show=true) => {
     
     }else{
 
-      html += `<div class="project">
+      html += `<div class="project" data-url="${s.slug}">
         <img class="project-image" src="images/${s.id}.jpg" />
         <div class="project-meta">${s.name}<br /><br />
           <!-- <div class="project-title">${s.title}</div> -->
@@ -186,6 +186,13 @@ const render_projects = (show=true) => {
     }
   })
   PROJECTS_ELM.innerHTML = html
+
+  document.querySelectorAll('.project').forEach( el => {
+    el.addEventListener('click', () => {
+      console.log( el.getAttribute('data-url') )
+      document.location.href = el.getAttribute('data-url')
+    })
+  })
 }
 
 const render_toggle = () => {
