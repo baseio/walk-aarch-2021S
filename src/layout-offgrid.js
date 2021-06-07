@@ -1,104 +1,211 @@
-var boxDims = new Array();
+const cleanupOffgrid = (selector) => {
 
-const boxpad = 20
+  document.querySelectorAll(`${selector} .offgrid-spacer`).forEach( s => s.remove() )
 
-export const layout = (elements,x=0,dx=0) => {
+  const els = document.querySelectorAll(`${selector} .project`);
 
-	// const elements = [].concat(_elements)
+  els.forEach( (el,i) => {
+    // el.style.marginRight = 'unset'    
+    el.style.marginRight = ''    
+  })
 
-
-	let indexes = []
-	elements.forEach( (e,i) => { indexes.push(i) })
-	indexes = shuffle(indexes)
-	console.log(indexes);
-
-	let minx = 0
-	let miny = 0
-
-	let availx = 10
-	let availy = 10
-	
-	indexes.forEach( i => {
-
-
-		const e = elements[i]
-
-		console.log(e);
-		
-		let conflict = true;
-		let box = null;
-
-		let attempts = 0
-
-		while (conflict && attempts < 10) {
-	    const fixLeft = Math.floor(Math.random()*availx) + minx;
-	    const fixTop  = Math.floor(Math.random()*availy) + miny;
-	    e.style.left = `${fixLeft}px`
-	    e.style.top  = `${fixTop}px`
-	    
-	    box = {
-        top: parseInt(window.getComputedStyle(e).top) || 0,
-        left: parseInt(window.getComputedStyle(e).left) || 0,
-        width: parseInt(window.getComputedStyle(e).width) || 0,
-        height: parseInt(window.getComputedStyle(e).height) || 0
-    	}
-	    
-	    conflict = false;
-	    // for(let j=0; j < boxDims.length; j++){
-     //    if( overlap(box,boxDims[j]) ){
-     //      conflict = true;
-     //      break;
-     //    } else {
-     //      conflict = false;
-     //    }                   
-	    // }
-
-	    attempts++;
-		}
-
-		minx += box.width + boxpad
-		// miny += box.
-		
-		// boxDims.push(box)
-		boxDims[i] = box
-
-	});
 }
 
-function overlap(box1,box2) {
-	var x1 = box1.left
-	var y1 = box1.top;
-	var h1 = box1.height;
-	var w1 = box1.width;
-	var b1 = y1 + h1;
-	var r1 = x1 + w1;
-	var x2 = box2.left;
-	var y2 = box2.top;
-	var h2 = box2.height;
-	var w2 = box2.width;
-	var b2 = y2 + h2;
-	var r2 = x2 + w2;
+let rects = []
+let W = 500;
+let MINV = 0;
 
-	var buf = 50;
+const renderOffgrid = (selector, data) => {
 
-	if (b1 + buf < y2 || y1 > b2 + buf || r1 + buf < x2 || x1 > r2 + buf) return false;
+  // return
+
+    const root = document.querySelector(`${selector}`) 
+    const els = document.querySelectorAll(`${selector} .project`);
+
+    els.forEach( (el,i) => {
+      
+      el.style.marginRight = `${10 + Math.round( Math.random()* 200)}px` 
+      // el.style.marginBottom = `${10 + Math.round( Math.random()*400)}px` 
+      
+    })
+
+    
+
+    // els.forEach( (el,i) => {
+    //   const n = document.createElement('div')
+    //   n.classList = 'project offgrid-spacer'
+    //   n.innerHTML = `S${i}`
+    //   n.style.width = `${Math.round( Math.random()*50)}px` 
+    //   n.style.height = `${Math.round( Math.random()*100)}px` 
+    //   root.insertBefore(n, el)
+    // })
+    els.forEach( (el,i) => {
+      const H = i === 0 ? 100 : 400;
+
+      const n = document.createElement('div')
+      n.classList = 'offgrid-spacer'
+      // n.innerHTML = `S${i}`
+    
+      n.style.height = `${Math.round( Math.random()*H)}px` 
+      el.insertBefore(n, el.firstChild)
+      // el.appendChild(n)
+    })
+
+
+      // const a = {
+    //   x1: 0,
+    //   y1: 0,
+    //   x2: 100,
+    //   y2: 100
+    // }
+    // const b = {
+    //   x1: 90,
+    //   y1: 10,
+    //   x2: 90,
+    //   y2: 90
+    // }
+    // console.log('touches:', touches(a,b), touches(b,a));
+    // console.log('overlaps:', overlaps(a,b), overlaps(b,a));
+
+    // const els = document.querySelectorAll(`${selector} .project`);
+    // els.forEach( (el,i) => {
+    //   const p = newPoint()
+    //   setPosition(el, p.x, p.y)
+    // })
+
+
+
+
+    // MINV = 0
+    // rects = []
+    // W = document.querySelector(selector).getBoundingClientRect().width;
+    
+    // const els = document.querySelectorAll(`${selector} .project`);
+
+    // els.forEach( (el,i) => {
+    //   if( rects.length ){
+    //     console.log('#', i);
+    //     const useRect = getPos( el )
+    //     console.log('> ', useRect);
+    //     if( useRect ){
+    //       rects.push( useRect )
+    //       setPosition(el, useRect.x1, useRect.y1 ) 
+    //     }
+
+    //   }else{
+    //     // first
+    //     setPosition(el, 0, 0)
+    //     rects.push( boundsToRect( el.getBoundingClientRect() ))
+    //   }
+    // })
+    // console.log('renderOffGrid', rects);
+}
+
+const getPos = (el) => {
+  const rect = getRect(el)
+
+  let ok = false
+  let attempts = 0
+  let res = undefined
+
+  while( !ok && attempts < 100 ){
+    const p = newPoint()
+    const movedRect = moveRect(rect, p.x, p.y)
+    
+    rects.forEach( r => {
+      if( !ok ){
+        console.log(r, movedRect, rect);
+        console.log('overlaps:', (overlaps(movedRect, r)), 'touches:', (touches(r, movedRect)), 'touches:', (touches(movedRect, r)) );
+        if( !touches(r, movedRect) ){
+          console.log('getPos ok! ', attempts, rects.length);
+          ok = true
+          res = movedRect
+        }
+      }
+    })
+    attempts++;    
+  }
+  if( !ok ){
+    console.log('getPos NOT OK', attempts, el);
+  }
+
+  return res
+}
+
+const newPoint = () => {
+  return {
+    x: Math.round( Math.random() * W ),
+    y: Math.round(  MINV + Math.random() * 100)
+  }
+}
+
+const moveRect = (r, x, y) => {
+  return {
+    x1:r.x1+x, 
+    y1:r.y1+y,
+    x2:r.x2+x,
+    y2:r.y2+y
+  }
+}
+
+const setPosition = (el, x, y) => {
+  el.style.left = `${x}px`
+  el.style.top  = `${y}}px`
+}
+
+const getRect = (el) => {
+  return boundsToRect( el.getBoundingClientRect() )
+}
+
+const boundsToRect = (b) => {
+  return {
+    x1: Math.round(b.left),
+    y1: Math.round(b.top),
+    x2: Math.round(b.right),
+    y2: Math.round(b.bottom)
+  }
+}
+
+
+// Check if rectangle a contains rectangle b
+// Each object (a and b) should have 2 properties to represent the
+// top-left corner (x1, y1) and 2 for the bottom-right corner (x2, y2).
+function contains(a, b) {
+	return !(
+		b.x1 < a.x1 ||
+		b.y1 < a.y1 ||
+		b.x2 > a.x2 ||
+		b.y2 > a.y2
+	);
+}
+
+// Check if rectangle a overlaps rectangle b
+// Each object (a and b) should have 2 properties to represent the
+// top-left corner (x1, y1) and 2 for the bottom-right corner (x2, y2).
+function overlaps(a, b) {
+	// no horizontal overlap
+	if (a.x1 >= b.x2 || b.x1 >= a.x2) return false;
+
+	// no vertical overlap
+	if (a.y1 >= b.y2 || b.y1 >= a.y2) return false;
+
 	return true;
 }
 
-function shuffle(array) {
-  var currentIndex = array.length,  randomIndex;
+// Check if rectangle a touches rectangle b
+// Each object (a and b) should have 2 properties to represent the
+// top-left corner (x1, y1) and 2 for the bottom-right corner (x2, y2).
+function touches(a, b) {
+	// has horizontal gap
+	if (a.x1 > b.x2 || b.x1 > a.x2) return false;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+	// has vertical gap
+	if (a.y1 > b.y2 || b.y1 > a.y2) return false;
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+	return true;
+}
 
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
+export {
+  cleanupOffgrid,
+  renderOffgrid
 }

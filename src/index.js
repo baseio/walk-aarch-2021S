@@ -5,10 +5,7 @@ console.log('students', DATA);
 
 import {nl2br} from './utils.js';
 import {buildMenu} from './menu.js';
-
-// import {setRandomPos} from './layout-offgrid.js'
-import {renderOffgrid, cleanupOffgrid} from './layout-offgrid2.js'
-// import {renderMasonry, removeMasonry} from './layout-offgrid-bricklayer.js'
+import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
 
 const MODE = {onoff:true, gridline:true};
 const PROJECTS_ELM = document.querySelector('.projects');
@@ -90,7 +87,7 @@ const render_list = (list) => {
     listHeadline = 'Architects'
     listContent = ''
     DATA.forEach( s => {
-      listContent += `<a href="" style="width:45%;display:inline-block;">${s.firstname} ${s.surname}</a>`
+      listContent += `<a href="" style="width:45%;display:inline-block;">${s.name}</a>`
     })
   }
   
@@ -165,13 +162,13 @@ const render_projects = (show=true) => {
       // filter out
     }else if( SEARCH_STRING != '' ){
 
-      const search = `${s.firstname} ${s.surname}`.toLowerCase()
+      const search = `${s.name}`.toLowerCase()
       const match = search.indexOf(SEARCH_STRING) > -1
 
       if( match ){
         html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" />
-          <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
+          <div class="project-meta">${s.name}<br /><br />
             <div class="project-title">${s.title}</div>
           </div>
         </div>`
@@ -181,7 +178,7 @@ const render_projects = (show=true) => {
 
       html += `<div class="project">
         <img class="project-image" src="images/${s.id}.jpg" />
-        <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
+        <div class="project-meta">${s.name}<br /><br />
           <!-- <div class="project-title">${s.title}</div> -->
         </div>
       </div>`

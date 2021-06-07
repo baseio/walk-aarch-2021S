@@ -102,867 +102,514 @@ STAY ONLINE.
   var students_default = [
     {
       id: "17012",
-      firstname: "Amanda Elvira Fleischer",
-      surname: "Vinther",
+      name: "Amanda Elvira Fleischer Vinther",
       title: "St\xF8berihallerne - Kulturens hus i Pr\xE6st\xF8",
-      email: "amandaefvinther@gmail.com",
-      mobile: "60467607",
-      studio: "1B",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17039",
-      firstname: "Anders Christian Vandvik",
-      surname: "Vedeler",
+      name: "Anders Christian Vandvik Vedeler",
       title: "Fra kontor til hjem - En radikal transformasjon av KFUM-huset.",
-      email: "anders.vedeler@gmail.com",
-      mobile: "22880480",
-      studio: "1C",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17049",
-      firstname: "Andreas H.",
-      surname: "Malsk\xE6r",
+      name: "Andreas H. Malsk\xE6r",
       title: "Tobaksfabrikken i Holstebro - Radikal bygningstransformation af produktionsindustri i midtbyen",
-      email: "andreas@malskaer.dk",
-      mobile: "52191695",
-      studio: "1C",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17055",
-      firstname: "Anja Kristina",
-      surname: "Koldby Jensen",
+      name: "Anja Kristina Koldby Jensen",
       title: "Den Kreative Efterskole - en skoloe med plads til fordybelse!",
-      email: "anjakoldby@hotmail.com",
-      mobile: "22716378",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17030",
-      firstname: "Anna",
-      surname: "Plawecka",
+      name: "Anna Plawecka",
       title: "In a loop of circularity: Building the future from the elements of the past. A space for inclusion, sustainability, and diversity in Aarhus Sydhavn.",
-      email: "annplawecka@gmail.com",
-      mobile: "91197976",
-      studio: "1A",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17063",
-      firstname: "Anne S\xF8by",
-      surname: "Nielsen",
+      name: "Anne S\xF8by Nielsen",
       title: "Architecture for Contested Sites: the Case of Grindsted",
-      email: "annesoeby@gmail.com",
-      mobile: "60290349",
-      studio: "2A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17008",
-      firstname: "Annika",
-      surname: "Lyon",
+      name: "Annika Lyon",
       title: "The Library of Things: Enriching Copenhagen\u2019s Circular Economy",
-      email: "annika.lyon96@gmail.com",
-      mobile: "91530996",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17003",
-      firstname: "Asbj\xF8rn",
-      surname: "Bratsbjerg",
+      name: "Asbj\xF8rn Bratsbjerg",
       title: "Danmarks nye kystlinje",
-      email: "asbjorn.bratsbjerg@gmail.com",
-      mobile: "26354571",
-      studio: "1C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17051",
-      firstname: "Asger",
-      surname: "Brix Pedersen",
+      name: "Asger Brix Pedersen",
       title: "Pier 3 quarter - a resilient biotope",
-      email: "asger.b.p@gmail.com",
-      mobile: "27586150",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17071",
-      firstname: "Chris Jongberg",
-      surname: "Johansen",
+      name: "Chris Jongberg Johansen",
       title: "Ask Cohousing - A part of the village",
-      email: "chrisjongberg@live.dk",
-      mobile: "31343868",
-      studio: "2C",
       theme: "",
-      slug: "",
-      kommentarak: "HAR IKKE UPLOADET BILLEDE - STANDIN!"
+      slug: ""
     },
     {
       id: "17059",
-      firstname: "Christian Vang",
-      surname: "Madsen",
+      name: "Christian Vang",
       title: "Accessing Nyholm - The Future Potential of Copenhagen's Last Fortification",
-      email: "christian.vang.madsen@gmail.com",
-      mobile: "29250888",
-      studio: "2A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17044",
-      firstname: "Emilie",
-      surname: "Enn\xE9 Lykkegaard",
+      name: "Emilie Enn\xE9 Lykkegaard",
       title: "Alice's Wonderland",
-      email: "emilie.enne.lykkegaard@gmail.com",
-      mobile: "53547510",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17037",
-      firstname: "Emma",
-      surname: "Rish\xF8j Holm",
+      name: "Emma Rish\xF8j Holm",
       title: "Sharing Suburbia",
-      email: "emmahrh@hotmail.com",
-      mobile: "28250244",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17042",
-      firstname: "Emma",
-      surname: "Skelander",
+      name: "Emma Skelander",
       title: "Circularity",
-      email: "emma.skelander@hotmail.com",
-      mobile: "46 762728104",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17034",
-      firstname: "Emma Sophie Stein",
-      surname: "Larsen",
+      name: "Emma Sophie Stein Larsen",
       title: "Investigating Play & Movement in Full-scale at Eskelunden, Aarhus",
-      email: "emma_sophie@hotmail.com",
-      mobile: "27622151",
-      studio: "2D",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17035",
-      firstname: "Erik Buur",
-      surname: "Bruntse",
+      name: "Erik Buur Bruntse",
       title: "Rathlousdal Gods",
-      email: "4004386@stud.aarch.dk",
-      mobile: "42916704",
-      studio: "1B",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17006",
-      firstname: "Hafd\xEDs Anna",
-      surname: "Bragad\xF3ttir",
+      name: "Hafd\xEDs Anna Bragad\xF3ttir",
       title: "Where light and darkness mingle",
-      email: "hafdis.bragadottir@hotmail.com",
-      mobile: "35 48216100",
-      studio: "2B",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17043",
-      firstname: "Hanna",
-      surname: "H\xF8jgaard Molden",
+      name: "Hanna H\xF8jgaard Molden",
       title: "Thinking hands Working heads - A new gymnasium in the centre of Oslo",
-      email: "moldenhanna@gmail.com",
-      mobile: "22414803",
-      studio: "2A",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17040",
-      firstname: "Hans",
-      surname: "Nielsen",
+      name: "Hans Nielsen",
       title: "The Elfdalian House - A Cultural Centre for Language",
-      email: "hanssnielsen@hotmail.com",
-      mobile: "27621026",
-      studio: "3",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: "gruppe"
+      slug: ""
     },
     {
       id: "17016",
-      firstname: "Hedvig",
-      surname: "Holtmann",
+      name: "Hedvig Holtmann",
       title: "Nurtured by Nature",
-      email: "hedvig.holtmann@hotmail.com",
-      mobile: "47 97473080",
-      studio: "3",
       theme: "extreme-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17046",
-      firstname: "Hugo",
-      surname: "Shackleton",
+      name: "Hugo Shackleton",
       title: "Polar Embassy",
-      email: "shackletonh@gmail.com",
-      mobile: "42604127",
-      studio: "3",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17019",
-      firstname: "Ingilvd",
-      surname: "Hansen",
+      name: "Ingvild Hansen",
       title: "The City as a Shared Resource - Investigations and Strategies for Aarhus as a Commons",
-      email: "ingvild.h93@hotmail.com",
-      mobile: "60242130",
-      studio: "1A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
-    },
-    {
-      id: "17038",
-      firstname: "Jacob",
-      surname: "Iuel Hersoug",
-      title: "Vitalisering, reservering og fire tennisbaner - En studie av balansen mellom storbyens markedsrettede utvikling og verdien av \xE5 ivareta byens \xE5pne, gr\xF8nne \xF8yer.",
-      email: "iuelhersoug@gmail.com",
-      mobile: "25568145",
-      studio: "2C",
-      theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17013",
-      firstname: "Jacob Hammer",
-      surname: "Thuesen",
+      name: "Jacob Hammer",
       title: "The Unsighted Experience: An Acoustic Integration In Architectural Design Towards A Beneficial Aural Environment",
-      email: "jacob.h.thuesen@gmail.com",
-      mobile: "21343264",
-      studio: "2B",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
+    },
+    {
+      id: "17038",
+      name: "Jacob Iuel Hersoug",
+      title: "Vitalisering, reservering og fire tennisbaner - En studie av balansen mellom storbyens markedsrettede utvikling og verdien av \xE5 ivareta byens \xE5pne, gr\xF8nne \xF8yer.",
+      theme: "urban-development",
+      slug: ""
     },
     {
       id: "17029",
-      firstname: "Janne N\xF8rreskov",
-      surname: "Burhardt",
+      name: "Janne N\xF8rreskov Burhardt",
       title: "Et kulturmilj\xF8 i Aarhus",
-      email: "fnumfnum@gmail.com",
-      mobile: "25467524",
-      studio: "1B",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17033",
-      firstname: "Jo Haugstveit",
-      surname: "Rusten",
+      name: "Jo Haugstveit Rusten",
       title: "Rethinking Leisure: In Light of Pandemics and Climatic Challenges",
-      email: "jo.h.rusten@gmail.com",
-      mobile: "42742453",
-      studio: "2A",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17041",
-      firstname: "Johannes",
-      surname: "Lundahl",
+      name: "Johannes Lundahl",
       title: "The Elfdalian House - A Cultural Centre for Language",
-      email: "johanneslundahl@gmail.com",
-      mobile: "51959799",
-      studio: "3",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17031",
-      firstname: "June Elisabeth",
-      surname: "Vestg\xE5rd",
+      name: "June Elisabeth Vestg\xE5rd",
       title: "Det r\xF8de slott - fra teglproduksjon til urbant grendehus langs Alnaelva",
-      email: "junevestgard@gmail.com",
-      mobile: "42658222",
-      studio: "1C",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17004",
-      firstname: "Kasper",
-      surname: "Eithz",
+      name: "Kasper Eithz",
       title: "Klatrecenter Thy \u2013 Transformation af en nedlagt Falck-station i Thisted.",
-      email: "kasper@eithz.dk",
-      mobile: "22736462",
-      studio: "1C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17022",
-      firstname: "Katarina",
-      surname: "Buhl",
+      name: "Katarina Buhl",
       title: "Designing For The Safe City",
-      email: "Katarinab@live.dk",
-      mobile: "60216461",
-      studio: "3",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17010",
-      firstname: "Kristina",
-      surname: "N\xF8rgaard",
+      name: "Kristina N\xF8rgaard",
       title: "Havet og \xF8erne - en transformation og fornyelse af F\xF8roya Sj\xF3savn",
-      email: "kristina@noergaard.dk",
-      mobile: "71906710",
-      studio: "1C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17057",
-      firstname: "Lars",
-      surname: "Brammer",
+      name: "Lars Brammer",
       title: "Tobaksfabrikken i Holstebro - Radikal bygningstransformation af produktionsindustri i midtbyen",
-      email: "larsbrammerjensen@gmail.com",
-      mobile: "22139120",
-      studio: "1C",
       theme: "urban-development",
-      slug: "",
-      kommentarak: "gruppe"
+      slug: ""
     },
     {
       id: "17056",
-      firstname: "Lars Erik",
-      surname: "Elseth",
+      name: "Lars Erik Elseth",
       title: "Instructed Matter A Material-Instructed Topology For Compact Urban Living.",
-      email: "larserikelseth@gmail.com",
-      mobile: "47 96911941",
-      studio: "2B",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17015",
-      firstname: "Line",
-      surname: "\xD8stergaard Poulsen",
+      name: "Line \xD8stergaard Poulsen",
       title: "Post-pandemic placemaking",
-      email: "line_oep@live.dk",
-      mobile: "20886149",
-      studio: "3",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17065",
-      firstname: "Lisa Christine",
-      surname: "Sippli",
+      name: "Lisa Christine Sippli",
       title: "ZECHE GNEISENAU",
-      email: "lisa.sippli@gmail.com",
-      mobile: "53806080",
-      studio: "1B",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17026",
-      firstname: "Lotte Vittrup",
-      surname: "Fredensborg",
+      name: "Lotte Vittrup Fredensborg",
       title: "The Sanctuary - For future Growth",
-      email: "lotte_f92@hotmail.com",
-      mobile: "60167089",
-      studio: "3",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17020",
-      firstname: "Louise Kring",
-      surname: "Larsen",
+      name: "Louise Kring Larsen",
       title: "Sidst jeg s\xE5 dig, var du v\xE6k - syv\xE5rss\xF8ernes foranderlige landskab",
-      email: "louisekringlarsen@hotmail.com",
-      mobile: "28888323",
-      studio: "1A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17011",
-      firstname: "Lucia",
-      surname: "Pells",
+      name: "Lucia Pells",
       title: "An Idle Place: Sympoietic Presences in Gr\xE5sten Nor",
-      email: "pells.luciam@gmail.com",
-      mobile: "50237283",
-      studio: "2A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17062",
-      firstname: "L\xE6rke",
-      surname: "Landsverk",
+      name: "L\xE6rke Landsverk",
       title: "Den gode afslutning - En nyfortolkning af \xE6ldrehjem",
-      email: "lattejensen@hotmail.com",
-      mobile: "29283505",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17032",
-      firstname: "Magnus Dahl",
-      surname: "Nicolajsen",
+      name: "Magnus Dahl Nicolajsen",
       title: "Longing for a stranger",
-      email: "futte2000@msn.com",
-      mobile: "50333337",
-      studio: "2D",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17066",
-      firstname: "Malene Thornemann",
-      surname: "Johansen",
+      name: "Malene Thornemann Johansen",
       title: "Formet af Vand - Et center for bev\xE6gelse",
-      email: "malenejohansen1@hotmail.com",
-      mobile: "28914214",
-      studio: "2A",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17017",
-      firstname: "Maria",
-      surname: "\xD8rris",
+      name: "Maria \xD8rris",
       title: "Vildrenens Forsvundne Territorier - En strategi for bevaring af h\xF8jfjeldets v\xE6rdier",
-      email: "maria.oerris@hotmail.com",
-      mobile: "20439271",
-      studio: "1A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17018",
-      firstname: "Melissa",
-      surname: "Bacher",
+      name: "Melissa Bacher",
       title: "SOCIALLY INCLUSIVE AGEING - THE THRESHOLD BETWEEN HOUSING AND PUBLIC SPACE",
-      email: "m.bacher@hotmail.com",
-      mobile: "43 6601265079",
-      studio: "3",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17069",
-      firstname: "Michelle",
-      surname: "Rosenvinge",
+      name: "Michelle Rosenvinge",
       title: "Perception in the Absence of Sight : Rehabilitation for the Visually Impaired",
-      email: "m.rosenvinge@icloud.com",
-      mobile: "29277008",
-      studio: "2A",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
+    },
+    {
+      id: "17073",
+      name: "Mischa Josefine St\xE6hr",
+      title: "Helt ude i hampen - Et b\xE6redygtigt bof\xE6llesskab",
+      theme: "",
+      slug: ""
     },
     {
       id: "17050",
-      firstname: "Morten",
-      surname: "Hagemann Nielsen",
+      name: "Morten Hagemann Nielsen",
       title: "Et modul\xE6rt sommerhus - En unders\xF8gelse af bindingsv\xE6rkshusets principper i moderne kontekst",
-      email: "mhagemannn@me.com",
-      mobile: "25345382",
-      studio: "2B",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17024",
-      firstname: "Nick",
-      surname: "Cole",
+      name: "Nick Cole",
       title: "Intercultural Museum Copenhagen",
-      email: "mail@nickcole.dk",
-      mobile: "28308081",
-      studio: "3",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17025",
-      firstname: "Nicola",
-      surname: "Traise",
+      name: "Nicola Traise",
       title: "Terra Incognita: Exploring Inland Alternatives to Coastal Centralisation",
-      email: "nicola.traise@hotmail.com",
-      mobile: "91889827",
-      studio: "1A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17001",
-      firstname: "Nikolai",
-      surname: "Thyregaard\xA0Nielsen",
+      name: "Nikolai Thyregaard Nielsen",
       title: "TOTAL LANDSCAPE - Case Study Herning",
-      email: "nikolaithyregaard@live.dk",
-      mobile: "28308878",
-      studio: "1A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17052",
-      firstname: "Nikolaj",
-      surname: "Heede Noe",
+      name: "Nikolaj Heede Noe",
       title: "TURN ON YOUR BASEMENT, PLEASE",
-      email: "nikolajnoe@hotmail.com",
-      mobile: "30913730",
-      studio: "2A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17045",
-      firstname: "Noah",
-      surname: "Vagle",
+      name: "Noah Vagle",
       title: "Akersveien 18. Arbeidstittel # 01. En restaurering.",
-      email: "noahvagle@gmail.com",
-      mobile: "47 41333191",
-      studio: "1B",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17023",
-      firstname: "Odin",
-      surname: "Olesen",
+      name: "Odin Olesen",
       title: "See and Be Scene",
-      email: "odin.olesen@hotmail.com",
-      mobile: "27641617",
-      studio: "3",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17047",
-      firstname: "Pernille",
-      surname: "B\xF8gh Hansen",
+      name: "Pernille B\xF8gh Hansen",
       title: "Turisme i et industrilevn - transformation af Hoed Kalkv\xE6rk",
-      email: "pernilleboeghh@gmail.com",
-      mobile: "40789178",
-      studio: "1C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17064",
-      firstname: "Pernille",
-      surname: "Dambo",
+      name: "Pernille Dambo",
       title: "From Linear to Circular - a rethinking of the waste station",
-      email: "Pernille_Dambo@hotmail.com",
-      mobile: "23722382",
-      studio: "2A",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17054",
-      firstname: "Peter Allan Klode",
-      surname: "Gustafson",
+      name: "Peter Allan Klode Gustafson",
       title: "Earth, Power and Building: Inhabiting terrain by architectrual degrowth",
-      email: "pakg1992@gmail.com",
-      mobile: "30717294",
-      studio: "2A",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17021",
-      firstname: "Philip",
-      surname: "B. Stiernstr\xF6m",
+      name: "Philip B. Stiernstr\xF6m",
       title: "Klippan: Merging narratives in Gothenburg harbour",
-      email: "philip.b.stiernstrom@gmail.com",
-      mobile: "42910282",
-      studio: "2C",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17005",
-      firstname: "Poul",
-      surname: "St\xF8ttrup Larsen",
+      name: "Poul St\xF8ttrup Larsen",
       title: "Naturh\xF8jskolen Mols Bjerge - Natur og kulturhistorie som ramme for f\xE6llesskabet",
-      email: "poul.stoettrup@gmail.com",
-      mobile: "61308094",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17002",
-      firstname: "Rasmus Sebastian",
-      surname: "Lassen",
+      name: "Rasmus Sebastian Lassen",
       title: "Radikal transformation af Rindsholm M\xF8lle",
-      email: "4004068@stud.aarch.dk",
-      mobile: "51891364",
-      studio: "1C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17036",
-      firstname: "Rasmus Svane",
-      surname: "H\xF8j",
+      name: "Rasmus Svane H\xF8j",
       title: "NOAH, YOU'RE GONNA NEED A BIGGER BOAT! Ideas for a speculative future at the cruise port of Copenhagen",
-      email: "rasmus.hoj@gmail.com",
-      mobile: "42728669",
-      studio: "2A",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17060",
-      firstname: "Sara",
-      surname: "Braae",
+      name: "Sara Braae",
       title: "En Forenet Plejesektor",
-      email: "sarabraae@hotmail.com",
-      mobile: "26237227",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17053",
-      firstname: "Signe",
-      surname: "Ravnholt",
+      name: "Signe Ravnholt",
       title: "Fra s\xE5ret landskab til s\xE6rligt sted: Landskabelige strategier for generationsforureningerne p\xE5 Harbo\xF8re Tange",
-      email: "ravnholtsigne@gmail.com",
-      mobile: "26737139",
-      studio: "1A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17067",
-      firstname: "Simon Egemose",
-      surname: "Knudsen Kirk",
+      name: "Simon Egemose Knudsen Kirk",
       title: "Revealing the multifarious nature around Flynders\xF8",
-      email: "simonegemose@gmail.com",
-      mobile: "31157244",
-      studio: "2D",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: "gruppe"
+      slug: ""
     },
     {
       id: "17009",
-      firstname: "Sizhe",
-      surname: "Wang",
+      name: "Sizhe Wang",
       title: "Drawing Investigations - on how drawings become a spontaneous, conscious procedure for constructing architecture.",
-      email: "wangsizhe19950806@163.com",
-      mobile: "22647861",
-      studio: "2B",
       theme: "extreme-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17027",
-      firstname: "Sofia Smith",
-      surname: "S\xF8rensen",
+      name: "Sofia Smith S\xF8rensen",
       title: "N\xE5r boligens rammer ikke kan rumme alle. Behov for pleje og forst\xE5else af begrebet hjem - En nyfortolkning.",
-      email: "sssofia@live.dk",
-      mobile: "20700975",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17072",
-      firstname: "Sofie Dalsgaard",
-      surname: "Jensen",
+      name: "Sofie Dalsgaard Jensen",
       title: "N\xE5r borgerne driver v\xE6rket / En selvbygget bydel i \xC5rhus",
-      email: "4003467@stud.aarch.dk",
-      mobile: "",
-      studio: "1A",
       theme: "",
-      slug: "",
-      kommentarak: "HAR IKKE UDFYLDT SKEMAET mangler privat nummer, mail og theme"
+      slug: ""
     },
     {
       id: "17070",
-      firstname: "Thomas Rants\xE9n",
-      surname: "H\xF8gdal",
+      name: "Thomas Rants\xE9n H\xF8gdal",
       title: "Et flere-familie f\xE6llesskab",
-      email: "thomas.hoegdal@hotmail.com",
-      mobile: "24454206",
-      studio: "2C",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17068",
-      firstname: "Thor Hedegaard",
-      surname: "Nielsen Bested",
+      name: "Thor Hedegaard Nielsen Bested",
       title: "Revealing the multifarious nature around Flynders\xF8",
-      email: "thor.bested@outlook.dk",
-      mobile: "40435633",
-      studio: "2D",
       theme: "sustainable-architecture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17061",
-      firstname: "Tim",
-      surname: "Greentree",
+      name: "Tim Greentree",
       title: "(Perma)Culture",
-      email: "tim_greentree@icloud.com",
-      mobile: "61 429940854",
-      studio: "1A",
       theme: "landscapes-in-transition",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17058",
-      firstname: "Ulrikke",
-      surname: "Eliassen",
+      name: "Ulrikke Eliassen",
       title: "What's that got to do with the price of Fish\xAE?",
-      email: "ulrikke.eliassen@gmail.com",
-      mobile: "26272192",
-      studio: "2A",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17028",
-      firstname: "Vilde",
-      surname: "Livsdatter",
+      name: "Vilde Livsdatter",
       title: "Food as a social catalyst in an urban environment (working title)",
-      email: "vildelivsdatter@live.com",
-      mobile: "53830223",
-      studio: "2C",
       theme: "new-commons",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17007",
-      firstname: "Wilhelm",
-      surname: "Reymert",
+      name: "Wilhelm Reymert",
       title: "Der By M\xF8ter Vann \u2013 Transformasjon av en Urban Lystb\xE5thavn",
-      email: "wilhelm.reymert@gmail.com",
-      mobile: "47 94977792",
-      studio: "2A",
       theme: "urban-development",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17014",
-      firstname: "William",
-      surname: "Reeve",
+      name: "William Reeve",
       title: "Circular Co-housing: How could circular principles be utilised to create & sustain bof\xE6llesskaber?",
-      email: "willsreeve@outlook.com",
-      mobile: "52827783",
-      studio: "2C",
       theme: "building-culture",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     },
     {
       id: "17048",
-      firstname: "\xC5smund",
-      surname: "Fjellstad",
+      name: "\xC5smund Fjellstad",
       title: "Lokstallen - Radikal transformasjon av et lokomotivverksted i Nordens Pompeii",
-      email: "4004013@stud.aarch.dk",
-      mobile: "42635333",
-      studio: "1C",
       theme: "cultural-heritage",
-      slug: "",
-      kommentarak: ""
+      slug: ""
     }
   ];
 
@@ -1044,7 +691,7 @@ STAY ONLINE.
     });
   };
 
-  // src/layout-offgrid2.js
+  // src/layout-offgrid.js
   var cleanupOffgrid = (selector) => {
     document.querySelectorAll(`${selector} .offgrid-spacer`).forEach((s) => s.remove());
     const els = document.querySelectorAll(`${selector} .project`);
@@ -1136,7 +783,7 @@ STAY ONLINE.
       listHeadline = "Architects";
       listContent = "";
       students_default.forEach((s) => {
-        listContent += `<a href="" style="width:45%;display:inline-block;">${s.firstname} ${s.surname}</a>`;
+        listContent += `<a href="" style="width:45%;display:inline-block;">${s.name}</a>`;
       });
     }
     let html = `
@@ -1191,12 +838,12 @@ STAY ONLINE.
     students_default.forEach((s, i) => {
       if (themefilter && s.theme != themefilter) {
       } else if (SEARCH_STRING != "") {
-        const search = `${s.firstname} ${s.surname}`.toLowerCase();
+        const search = `${s.name}`.toLowerCase();
         const match = search.indexOf(SEARCH_STRING) > -1;
         if (match) {
           html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" />
-          <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
+          <div class="project-meta">${s.name}<br /><br />
             <div class="project-title">${s.title}</div>
           </div>
         </div>`;
@@ -1204,7 +851,7 @@ STAY ONLINE.
       } else {
         html += `<div class="project">
         <img class="project-image" src="images/${s.id}.jpg" />
-        <div class="project-meta">${s.firstname} ${s.surname}<br /><br />
+        <div class="project-meta">${s.name}<br /><br />
           <!-- <div class="project-title">${s.title}</div> -->
         </div>
       </div>`;

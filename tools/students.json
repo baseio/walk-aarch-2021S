@@ -1,866 +1,513 @@
 [
  {
   "id": "17012",
-  "firstname": "Amanda Elvira Fleischer",
-  "surname": "Vinther",
+  "name": "Amanda Elvira Fleischer Vinther",
   "title": "Støberihallerne - Kulturens hus i Præstø",
-  "email": "amandaefvinther@gmail.com",
-  "mobile": "60467607",
-  "studio": "1B",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17039",
-  "firstname": "Anders Christian Vandvik",
-  "surname": "Vedeler",
+  "name": "Anders Christian Vandvik Vedeler",
   "title": "Fra kontor til hjem - En radikal transformasjon av KFUM-huset.",
-  "email": "anders.vedeler@gmail.com",
-  "mobile": "22880480",
-  "studio": "1C",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17049",
-  "firstname": "Andreas H.",
-  "surname": "Malskær",
+  "name": "Andreas H. Malskær",
   "title": "Tobaksfabrikken i Holstebro - Radikal bygningstransformation af produktionsindustri i midtbyen",
-  "email": "andreas@malskaer.dk",
-  "mobile": "52191695",
-  "studio": "1C",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17055",
-  "firstname": "Anja Kristina",
-  "surname": "Koldby Jensen",
+  "name": "Anja Kristina Koldby Jensen",
   "title": "Den Kreative Efterskole - en skoloe med plads til fordybelse!",
-  "email": "anjakoldby@hotmail.com",
-  "mobile": "22716378",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17030",
-  "firstname": "Anna",
-  "surname": "Plawecka",
+  "name": "Anna Plawecka",
   "title": "In a loop of circularity: Building the future from the elements of the past. A space for inclusion, sustainability, and diversity in Aarhus Sydhavn.",
-  "email": "annplawecka@gmail.com",
-  "mobile": "91197976",
-  "studio": "1A",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17063",
-  "firstname": "Anne Søby",
-  "surname": "Nielsen",
+  "name": "Anne Søby Nielsen",
   "title": "Architecture for Contested Sites: the Case of Grindsted",
-  "email": "annesoeby@gmail.com",
-  "mobile": "60290349",
-  "studio": "2A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17008",
-  "firstname": "Annika",
-  "surname": "Lyon",
+  "name": "Annika Lyon",
   "title": "The Library of Things: Enriching Copenhagen’s Circular Economy",
-  "email": "annika.lyon96@gmail.com",
-  "mobile": "91530996",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17003",
-  "firstname": "Asbjørn",
-  "surname": "Bratsbjerg",
+  "name": "Asbjørn Bratsbjerg",
   "title": "Danmarks nye kystlinje",
-  "email": "asbjorn.bratsbjerg@gmail.com",
-  "mobile": "26354571",
-  "studio": "1C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17051",
-  "firstname": "Asger",
-  "surname": "Brix Pedersen",
+  "name": "Asger Brix Pedersen",
   "title": "Pier 3 quarter - a resilient biotope",
-  "email": "asger.b.p@gmail.com",
-  "mobile": "27586150",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17071",
-  "firstname": "Chris Jongberg",
-  "surname": "Johansen",
+  "name": "Chris Jongberg Johansen",
   "title": "Ask Cohousing - A part of the village",
-  "email": "chrisjongberg@live.dk",
-  "mobile": "31343868",
-  "studio": "2C",
   "theme": "",
-  "slug": "",
-  "kommentarak": "HAR IKKE UPLOADET BILLEDE - STANDIN!"
+  "slug": ""
  },
  {
   "id": "17059",
-  "firstname": "Christian Vang",
-  "surname": "Madsen",
+  "name": "Christian Vang",
   "title": "Accessing Nyholm - The Future Potential of Copenhagen's Last Fortification",
-  "email": "christian.vang.madsen@gmail.com",
-  "mobile": "29250888",
-  "studio": "2A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17044",
-  "firstname": "Emilie",
-  "surname": "Enné Lykkegaard",
+  "name": "Emilie Enné Lykkegaard",
   "title": "Alice's Wonderland",
-  "email": "emilie.enne.lykkegaard@gmail.com",
-  "mobile": "53547510",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17037",
-  "firstname": "Emma",
-  "surname": "Rishøj Holm",
+  "name": "Emma Rishøj Holm",
   "title": "Sharing Suburbia",
-  "email": "emmahrh@hotmail.com",
-  "mobile": "28250244",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17042",
-  "firstname": "Emma",
-  "surname": "Skelander",
+  "name": "Emma Skelander",
   "title": "Circularity",
-  "email": "emma.skelander@hotmail.com",
-  "mobile": "46 762728104",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17034",
-  "firstname": "Emma Sophie Stein",
-  "surname": "Larsen",
+  "name": "Emma Sophie Stein Larsen",
   "title": "Investigating Play & Movement in Full-scale at Eskelunden, Aarhus",
-  "email": "emma_sophie@hotmail.com",
-  "mobile": "27622151",
-  "studio": "2D",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17035",
-  "firstname": "Erik Buur",
-  "surname": "Bruntse",
+  "name": "Erik Buur Bruntse",
   "title": "Rathlousdal Gods",
-  "email": "4004386@stud.aarch.dk",
-  "mobile": "42916704",
-  "studio": "1B",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17006",
-  "firstname": "Hafdís Anna",
-  "surname": "Bragadóttir",
+  "name": "Hafdís Anna Bragadóttir",
   "title": "Where light and darkness mingle",
-  "email": "hafdis.bragadottir@hotmail.com",
-  "mobile": "35 48216100",
-  "studio": "2B",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17043",
-  "firstname": "Hanna",
-  "surname": "Højgaard Molden",
+  "name": "Hanna Højgaard Molden",
   "title": "Thinking hands Working heads - A new gymnasium in the centre of Oslo",
-  "email": "moldenhanna@gmail.com",
-  "mobile": "22414803",
-  "studio": "2A",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17040",
-  "firstname": "Hans",
-  "surname": "Nielsen",
+  "name": "Hans Nielsen",
   "title": "The Elfdalian House - A Cultural Centre for Language",
-  "email": "hanssnielsen@hotmail.com",
-  "mobile": "27621026",
-  "studio": "3",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": "gruppe"
+  "slug": ""
  },
  {
   "id": "17016",
-  "firstname": "Hedvig",
-  "surname": "Holtmann",
+  "name": "Hedvig Holtmann",
   "title": "Nurtured by Nature",
-  "email": "hedvig.holtmann@hotmail.com",
-  "mobile": "47 97473080",
-  "studio": "3",
   "theme": "extreme-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17046",
-  "firstname": "Hugo",
-  "surname": "Shackleton",
+  "name": "Hugo Shackleton",
   "title": "Polar Embassy",
-  "email": "shackletonh@gmail.com",
-  "mobile": "42604127",
-  "studio": "3",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17019",
-  "firstname": "Ingilvd",
-  "surname": "Hansen",
+  "name": "Ingvild Hansen",
   "title": "The City as a Shared Resource - Investigations and Strategies for Aarhus as a Commons",
-  "email": "ingvild.h93@hotmail.com",
-  "mobile": "60242130",
-  "studio": "1A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
- },
- {
-  "id": "17038",
-  "firstname": "Jacob",
-  "surname": "Iuel Hersoug",
-  "title": "Vitalisering, reservering og fire tennisbaner - En studie av balansen mellom storbyens markedsrettede utvikling og verdien av å ivareta byens åpne, grønne øyer.",
-  "email": "iuelhersoug@gmail.com",
-  "mobile": "25568145",
-  "studio": "2C",
-  "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17013",
-  "firstname": "Jacob Hammer",
-  "surname": "Thuesen",
+  "name": "Jacob Hammer",
   "title": "The Unsighted Experience: An Acoustic Integration In Architectural Design Towards A Beneficial Aural Environment",
-  "email": "jacob.h.thuesen@gmail.com",
-  "mobile": "21343264",
-  "studio": "2B",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
+ },
+ {
+  "id": "17038",
+  "name": "Jacob Iuel Hersoug",
+  "title": "Vitalisering, reservering og fire tennisbaner - En studie av balansen mellom storbyens markedsrettede utvikling og verdien av å ivareta byens åpne, grønne øyer.",
+  "theme": "urban-development",
+  "slug": ""
  },
  {
   "id": "17029",
-  "firstname": "Janne Nørreskov",
-  "surname": "Burhardt",
+  "name": "Janne Nørreskov Burhardt",
   "title": "Et kulturmiljø i Aarhus",
-  "email": "fnumfnum@gmail.com",
-  "mobile": "25467524",
-  "studio": "1B",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17033",
-  "firstname": "Jo Haugstveit",
-  "surname": "Rusten",
+  "name": "Jo Haugstveit Rusten",
   "title": "Rethinking Leisure: In Light of Pandemics and Climatic Challenges",
-  "email": "jo.h.rusten@gmail.com",
-  "mobile": "42742453",
-  "studio": "2A",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17041",
-  "firstname": "Johannes",
-  "surname": "Lundahl",
+  "name": "Johannes Lundahl",
   "title": "The Elfdalian House - A Cultural Centre for Language",
-  "email": "johanneslundahl@gmail.com",
-  "mobile": "51959799",
-  "studio": "3",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17031",
-  "firstname": "June Elisabeth",
-  "surname": "Vestgård",
+  "name": "June Elisabeth Vestgård",
   "title": "Det røde slott - fra teglproduksjon til urbant grendehus langs Alnaelva",
-  "email": "junevestgard@gmail.com",
-  "mobile": "42658222",
-  "studio": "1C",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17004",
-  "firstname": "Kasper",
-  "surname": "Eithz",
+  "name": "Kasper Eithz",
   "title": "Klatrecenter Thy – Transformation af en nedlagt Falck-station i Thisted.",
-  "email": "kasper@eithz.dk",
-  "mobile": "22736462",
-  "studio": "1C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17022",
-  "firstname": "Katarina",
-  "surname": "Buhl",
+  "name": "Katarina Buhl",
   "title": "Designing For The Safe City",
-  "email": "Katarinab@live.dk",
-  "mobile": "60216461",
-  "studio": "3",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17010",
-  "firstname": "Kristina",
-  "surname": "Nørgaard",
+  "name": "Kristina Nørgaard",
   "title": "Havet og øerne - en transformation og fornyelse af Føroya Sjósavn",
-  "email": "kristina@noergaard.dk",
-  "mobile": "71906710",
-  "studio": "1C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17057",
-  "firstname": "Lars",
-  "surname": "Brammer",
+  "name": "Lars Brammer",
   "title": "Tobaksfabrikken i Holstebro - Radikal bygningstransformation af produktionsindustri i midtbyen",
-  "email": "larsbrammerjensen@gmail.com",
-  "mobile": "22139120",
-  "studio": "1C",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": "gruppe"
+  "slug": ""
  },
  {
   "id": "17056",
-  "firstname": "Lars Erik",
-  "surname": "Elseth",
+  "name": "Lars Erik Elseth",
   "title": "Instructed Matter A Material-Instructed Topology For Compact Urban Living.",
-  "email": "larserikelseth@gmail.com",
-  "mobile": "47 96911941",
-  "studio": "2B",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17015",
-  "firstname": "Line",
-  "surname": "Østergaard Poulsen",
+  "name": "Line Østergaard Poulsen",
   "title": "Post-pandemic placemaking",
-  "email": "line_oep@live.dk",
-  "mobile": "20886149",
-  "studio": "3",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17065",
-  "firstname": "Lisa Christine",
-  "surname": "Sippli",
+  "name": "Lisa Christine Sippli",
   "title": "ZECHE GNEISENAU",
-  "email": "lisa.sippli@gmail.com",
-  "mobile": "53806080",
-  "studio": "1B",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17026",
-  "firstname": "Lotte Vittrup",
-  "surname": "Fredensborg",
+  "name": "Lotte Vittrup Fredensborg",
   "title": "The Sanctuary - For future Growth",
-  "email": "lotte_f92@hotmail.com",
-  "mobile": "60167089",
-  "studio": "3",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17020",
-  "firstname": "Louise Kring",
-  "surname": "Larsen",
+  "name": "Louise Kring Larsen",
   "title": "Sidst jeg så dig, var du væk - syvårssøernes foranderlige landskab",
-  "email": "louisekringlarsen@hotmail.com",
-  "mobile": "28888323",
-  "studio": "1A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17011",
-  "firstname": "Lucia",
-  "surname": "Pells",
+  "name": "Lucia Pells",
   "title": "An Idle Place: Sympoietic Presences in Gråsten Nor",
-  "email": "pells.luciam@gmail.com",
-  "mobile": "50237283",
-  "studio": "2A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17062",
-  "firstname": "Lærke",
-  "surname": "Landsverk",
+  "name": "Lærke Landsverk",
   "title": "Den gode afslutning - En nyfortolkning af ældrehjem",
-  "email": "lattejensen@hotmail.com",
-  "mobile": "29283505",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17032",
-  "firstname": "Magnus Dahl",
-  "surname": "Nicolajsen",
+  "name": "Magnus Dahl Nicolajsen",
   "title": "Longing for a stranger",
-  "email": "futte2000@msn.com",
-  "mobile": "50333337",
-  "studio": "2D",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17066",
-  "firstname": "Malene Thornemann",
-  "surname": "Johansen",
+  "name": "Malene Thornemann Johansen",
   "title": "Formet af Vand - Et center for bevægelse",
-  "email": "malenejohansen1@hotmail.com",
-  "mobile": "28914214",
-  "studio": "2A",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17017",
-  "firstname": "Maria",
-  "surname": "Ørris",
+  "name": "Maria Ørris",
   "title": "Vildrenens Forsvundne Territorier - En strategi for bevaring af højfjeldets værdier",
-  "email": "maria.oerris@hotmail.com",
-  "mobile": "20439271",
-  "studio": "1A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17018",
-  "firstname": "Melissa",
-  "surname": "Bacher",
+  "name": "Melissa Bacher",
   "title": "SOCIALLY INCLUSIVE AGEING - THE THRESHOLD BETWEEN HOUSING AND PUBLIC SPACE",
-  "email": "m.bacher@hotmail.com",
-  "mobile": "43 6601265079",
-  "studio": "3",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17069",
-  "firstname": "Michelle",
-  "surname": "Rosenvinge",
+  "name": "Michelle Rosenvinge",
   "title": "Perception in the Absence of Sight : Rehabilitation for the Visually Impaired",
-  "email": "m.rosenvinge@icloud.com",
-  "mobile": "29277008",
-  "studio": "2A",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
+ },
+ {
+  "id": "17073",
+  "name": "Mischa Josefine Stæhr",
+  "title": "Helt ude i hampen - Et bæredygtigt bofællesskab",
+  "theme": "",
+  "slug": ""
  },
  {
   "id": "17050",
-  "firstname": "Morten",
-  "surname": "Hagemann Nielsen",
+  "name": "Morten Hagemann Nielsen",
   "title": "Et modulært sommerhus - En undersøgelse af bindingsværkshusets principper i moderne kontekst",
-  "email": "mhagemannn@me.com",
-  "mobile": "25345382",
-  "studio": "2B",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17024",
-  "firstname": "Nick",
-  "surname": "Cole",
+  "name": "Nick Cole",
   "title": "Intercultural Museum Copenhagen",
-  "email": "mail@nickcole.dk",
-  "mobile": "28308081",
-  "studio": "3",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17025",
-  "firstname": "Nicola",
-  "surname": "Traise",
+  "name": "Nicola Traise",
   "title": "Terra Incognita: Exploring Inland Alternatives to Coastal Centralisation",
-  "email": "nicola.traise@hotmail.com",
-  "mobile": "91889827",
-  "studio": "1A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17001",
-  "firstname": "Nikolai",
-  "surname": "Thyregaard Nielsen",
+  "name": "Nikolai Thyregaard Nielsen",
   "title": "TOTAL LANDSCAPE - Case Study Herning",
-  "email": "nikolaithyregaard@live.dk",
-  "mobile": "28308878",
-  "studio": "1A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17052",
-  "firstname": "Nikolaj",
-  "surname": "Heede Noe",
+  "name": "Nikolaj Heede Noe",
   "title": "TURN ON YOUR BASEMENT, PLEASE",
-  "email": "nikolajnoe@hotmail.com",
-  "mobile": "30913730",
-  "studio": "2A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17045",
-  "firstname": "Noah",
-  "surname": "Vagle",
+  "name": "Noah Vagle",
   "title": "Akersveien 18. Arbeidstittel # 01. En restaurering.",
-  "email": "noahvagle@gmail.com",
-  "mobile": "47 41333191",
-  "studio": "1B",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17023",
-  "firstname": "Odin",
-  "surname": "Olesen",
+  "name": "Odin Olesen",
   "title": "See and Be Scene",
-  "email": "odin.olesen@hotmail.com",
-  "mobile": "27641617",
-  "studio": "3",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17047",
-  "firstname": "Pernille",
-  "surname": "Bøgh Hansen",
+  "name": "Pernille Bøgh Hansen",
   "title": "Turisme i et industrilevn - transformation af Hoed Kalkværk",
-  "email": "pernilleboeghh@gmail.com",
-  "mobile": "40789178",
-  "studio": "1C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17064",
-  "firstname": "Pernille",
-  "surname": "Dambo",
+  "name": "Pernille Dambo",
   "title": "From Linear to Circular - a rethinking of the waste station",
-  "email": "Pernille_Dambo@hotmail.com",
-  "mobile": "23722382",
-  "studio": "2A",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17054",
-  "firstname": "Peter Allan Klode",
-  "surname": "Gustafson",
+  "name": "Peter Allan Klode Gustafson",
   "title": "Earth, Power and Building: Inhabiting terrain by architectrual degrowth",
-  "email": "pakg1992@gmail.com",
-  "mobile": "30717294",
-  "studio": "2A",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17021",
-  "firstname": "Philip",
-  "surname": "B. Stiernström",
+  "name": "Philip B. Stiernström",
   "title": "Klippan: Merging narratives in Gothenburg harbour",
-  "email": "philip.b.stiernstrom@gmail.com",
-  "mobile": "42910282",
-  "studio": "2C",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17005",
-  "firstname": "Poul",
-  "surname": "Støttrup Larsen",
+  "name": "Poul Støttrup Larsen",
   "title": "Naturhøjskolen Mols Bjerge - Natur og kulturhistorie som ramme for fællesskabet",
-  "email": "poul.stoettrup@gmail.com",
-  "mobile": "61308094",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17002",
-  "firstname": "Rasmus Sebastian",
-  "surname": "Lassen",
+  "name": "Rasmus Sebastian Lassen",
   "title": "Radikal transformation af Rindsholm Mølle",
-  "email": "4004068@stud.aarch.dk",
-  "mobile": "51891364",
-  "studio": "1C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17036",
-  "firstname": "Rasmus Svane",
-  "surname": "Høj",
+  "name": "Rasmus Svane Høj",
   "title": "NOAH, YOU'RE GONNA NEED A BIGGER BOAT! Ideas for a speculative future at the cruise port of Copenhagen",
-  "email": "rasmus.hoj@gmail.com",
-  "mobile": "42728669",
-  "studio": "2A",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17060",
-  "firstname": "Sara",
-  "surname": "Braae",
+  "name": "Sara Braae",
   "title": "En Forenet Plejesektor",
-  "email": "sarabraae@hotmail.com",
-  "mobile": "26237227",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17053",
-  "firstname": "Signe",
-  "surname": "Ravnholt",
+  "name": "Signe Ravnholt",
   "title": "Fra såret landskab til særligt sted: Landskabelige strategier for generationsforureningerne på Harboøre Tange",
-  "email": "ravnholtsigne@gmail.com",
-  "mobile": "26737139",
-  "studio": "1A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17067",
-  "firstname": "Simon Egemose",
-  "surname": "Knudsen Kirk",
+  "name": "Simon Egemose Knudsen Kirk",
   "title": "Revealing the multifarious nature around Flyndersø",
-  "email": "simonegemose@gmail.com",
-  "mobile": "31157244",
-  "studio": "2D",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": "gruppe"
+  "slug": ""
  },
  {
   "id": "17009",
-  "firstname": "Sizhe",
-  "surname": "Wang",
+  "name": "Sizhe Wang",
   "title": "Drawing Investigations - on how drawings become a spontaneous, conscious procedure for constructing architecture.",
-  "email": "wangsizhe19950806@163.com",
-  "mobile": "22647861",
-  "studio": "2B",
   "theme": "extreme-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17027",
-  "firstname": "Sofia Smith",
-  "surname": "Sørensen",
+  "name": "Sofia Smith Sørensen",
   "title": "Når boligens rammer ikke kan rumme alle. Behov for pleje og forståelse af begrebet hjem - En nyfortolkning.",
-  "email": "sssofia@live.dk",
-  "mobile": "20700975",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17072",
-  "firstname": "Sofie Dalsgaard",
-  "surname": "Jensen",
+  "name": "Sofie Dalsgaard Jensen",
   "title": "Når borgerne driver værket / En selvbygget bydel i Århus",
-  "email": "4003467@stud.aarch.dk",
-  "mobile": "",
-  "studio": "1A",
   "theme": "",
-  "slug": "",
-  "kommentarak": "HAR IKKE UDFYLDT SKEMAET mangler privat nummer, mail og theme"
+  "slug": ""
  },
  {
   "id": "17070",
-  "firstname": "Thomas Rantsén",
-  "surname": "Høgdal",
+  "name": "Thomas Rantsén Høgdal",
   "title": "Et flere-familie fællesskab",
-  "email": "thomas.hoegdal@hotmail.com",
-  "mobile": "24454206",
-  "studio": "2C",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17068",
-  "firstname": "Thor Hedegaard",
-  "surname": "Nielsen Bested",
+  "name": "Thor Hedegaard Nielsen Bested",
   "title": "Revealing the multifarious nature around Flyndersø",
-  "email": "thor.bested@outlook.dk",
-  "mobile": "40435633",
-  "studio": "2D",
   "theme": "sustainable-architecture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17061",
-  "firstname": "Tim",
-  "surname": "Greentree",
+  "name": "Tim Greentree",
   "title": "(Perma)Culture",
-  "email": "tim_greentree@icloud.com",
-  "mobile": "61 429940854",
-  "studio": "1A",
   "theme": "landscapes-in-transition",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17058",
-  "firstname": "Ulrikke",
-  "surname": "Eliassen",
+  "name": "Ulrikke Eliassen",
   "title": "What's that got to do with the price of Fish®?",
-  "email": "ulrikke.eliassen@gmail.com",
-  "mobile": "26272192",
-  "studio": "2A",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17028",
-  "firstname": "Vilde",
-  "surname": "Livsdatter",
-  "title": "Food as a social catalyst in an urban environment (working title)",
-  "email": "vildelivsdatter@live.com",
-  "mobile": "53830223",
-  "studio": "2C",
+  "name": "Vilde Livsdatter",
+  "title": "The Catalyst Centre for Future Foods - A synergy between architecture, people and a conscious food culture.",
   "theme": "new-commons",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17007",
-  "firstname": "Wilhelm",
-  "surname": "Reymert",
+  "name": "Wilhelm Reymert",
   "title": "Der By Møter Vann – Transformasjon av en Urban Lystbåthavn",
-  "email": "wilhelm.reymert@gmail.com",
-  "mobile": "47 94977792",
-  "studio": "2A",
   "theme": "urban-development",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17014",
-  "firstname": "William",
-  "surname": "Reeve",
+  "name": "William Reeve",
   "title": "Circular Co-housing: How could circular principles be utilised to create & sustain bofællesskaber?",
-  "email": "willsreeve@outlook.com",
-  "mobile": "52827783",
-  "studio": "2C",
   "theme": "building-culture",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  },
  {
   "id": "17048",
-  "firstname": "Åsmund",
-  "surname": "Fjellstad",
+  "name": "Åsmund Fjellstad",
   "title": "Lokstallen - Radikal transformasjon av et lokomotivverksted i Nordens Pompeii",
-  "email": "4004013@stud.aarch.dk",
-  "mobile": "42635333",
-  "studio": "1C",
   "theme": "cultural-heritage",
-  "slug": "",
-  "kommentarak": ""
+  "slug": ""
  }
 ]

@@ -27,7 +27,7 @@ require("stupid-sheets")(googleSheetsId, json => {
   })
   
   // order alphabetically, by firstname:
-  json = sortByKey(json, 'firstname')
+  json = sortByKey(json, 'name')
   
   console.log(json);
 
