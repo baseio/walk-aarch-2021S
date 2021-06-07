@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+  font: 13px/1.65em "Univers LT W02 55 Roman", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+* {
+  background-repeat: no-repeat;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+strong {
+  font-family: 'Univers LT W02 65 Bold';
+  font-weight: 700;
+}
+
+a, a:visited {
+  color: #000;
+}
+a:hover {
+  color: #09f;
+}

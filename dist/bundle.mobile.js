@@ -714,7 +714,7 @@ STAY ONLINE.
     });
   };
 
-  // src/index.js
+  // src/index.mobile.js
   console.log("students", students_default);
   var MODE = {onoff: true, gridline: true};
   var PROJECTS_ELM = document.querySelector(".projects");
