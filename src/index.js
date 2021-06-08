@@ -1,7 +1,7 @@
 
 import PAGES from './pages.js'
 import DATA from '../tools/students.json';
-console.log('students', DATA);
+// console.log('students', DATA);
 
 import {nl2br} from './utils.js';
 import {buildMenu} from './menu.js';
@@ -181,7 +181,7 @@ const render_projects = (show=true) => {
     }else{
 
       html += `<div class="project" data-url="${s.slug}">
-        <img class="project-image" src="images/${s.id}.jpg" />
+        <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
         <div class="project-meta">${s.name}<br /><br />
           <!-- <div class="project-title">${s.title}</div> -->
         </div>

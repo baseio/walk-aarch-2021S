@@ -717,7 +717,6 @@ STAY ONLINE.
   };
 
   // src/index.js
-  console.log("students", students_default);
   var MODE = {onoff: true, gridline: false};
   var PROJECTS_ELM = document.querySelector(".projects");
   var MOUSE_PRESSED = false;
@@ -856,7 +855,7 @@ STAY ONLINE.
         }
       } else {
         html += `<div class="project" data-url="${s.slug}">
-        <img class="project-image" src="images/${s.id}.jpg" />
+        <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
         <div class="project-meta">${s.name}<br /><br />
           <!-- <div class="project-title">${s.title}</div> -->
         </div>
