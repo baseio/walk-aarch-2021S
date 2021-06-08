@@ -2,42 +2,36 @@ const PAGES = {
 
   "ongrid": `
     <h2>ONGRID</h2>
-
-    and this is some ONGRID text
+    When you are on-grid you are connected to a central computer, a server, or the internet, being part of a larger system where data and people connect but also expose themselves to everybody else on the grid. 
   `,
 
 
   "online": `
     <h2>ONLINE</h2>
-
-    and this is some ONLINE text
+    Being online in the sense of being connected to a central computer, a server or the internet has become part of our lives. Every move we take is somehow registered online, with or without our knowledge or consent. From medical prescriptions, exam results and work capacity to  contact with friends, family and others – it's all online, stored somewhere in the vast unknown cloud as digital fingerprints of our presence. You’re always ON. As a consequence, some people choose to go off-grid or off-line for a while.
   `,
 
 
   "offline": `
     <h2>OFFLINE</h2>
-
-    and this is some OFFLINE text
+    Going offline means shutting down your connections, intentionally disconnecting from the online world around you and thus unable to exchange data with a server or a network. Being offline is also used as a metaphor for taking time off from work, obligations and appointments or taking a holiday. Or it may be a permanent decision, although that is rather difficult in 2021.
   `,
 
 
   "offgrid": `
     <h2>OFFGRID</h2>
-
-    and this is some OFFGRID text
+    Being off-grid means you are not connected in any way to or dependent on a network. But ‘off- grid’ is also used to characterize a building or a lifestyle that allows people to be self-sufficient in order to reduce environmental impact and the cost of living. When you go off-grid you disconnect from the system in favour of so-called simple living or living without leaving a trace.
   `,
 
 
   "rectors-speech": `
     <h2>Rector's Speech</h2>
-
     TBA
   `,
 
 
   "curators-voice": `
     <h2>Curators voice</h2>
-
     [DK]
 
 ON LINE OFF GRID

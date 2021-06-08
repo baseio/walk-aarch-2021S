@@ -75,6 +75,7 @@
   /* text-transform: uppercase; */
   font-size: 24px;
   line-height: 100%;
+  margin-bottom: 0;
 }
 .copy > img {
   width: 230px;
@@ -173,10 +174,5 @@
 }
 
 .project .project-image {
-  /* background-color: tomato; */
-  /* width: 100px; */
   width: inherit;
-}
-.project .project-meta {
-  /* color: #f00; */
 }

@@ -25,10 +25,22 @@ const menudata = [
 ]
 
 
-export const buildMenu = (selector = '.menu') => {
+const selector = '.menu';
 
-	console.log('buildMenu selector', selector);
-	
+// clear selection from menu
+export const clearSelection = () => {
+	console.log('clearSelection');
+  document.querySelectorAll( selector +' .selected').forEach(el => el.classList.remove('selected'));
+}
+
+// collapse all trees
+export const collapseAll = () => {
+	console.log('collapseAll');
+	document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
+}
+
+export const buildMenu = () => {
+
 	let html = ''
 
 	menudata.forEach( m => {
@@ -63,6 +75,12 @@ export const buildMenu = (selector = '.menu') => {
 				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
 			}
 
+			// if( window.location.hash === `#${ el.getAttribute('data-menu-key') }` ){
+			// 	window.location.hash = '';
+			// }else{
+			// 	window.location.hash = `#${ el.getAttribute('data-menu-key') }`	
+			// }
+
 			window.location.hash = `#${ el.getAttribute('data-menu-key') }`
 		})
 	})
@@ -73,14 +91,13 @@ export const buildMenu = (selector = '.menu') => {
 			if( el.classList.contains('selected') ){
 				el.classList.remove('selected');
 				document.querySelector(`#${el.getAttribute('data-menu-key')}`).classList.remove('open');
+				window.location.hash = '';
 				return;
 			}else{
 			
 				//unselect others, select self
 				document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
-				el.classList.add('selected');
-
-				
+				el.classList.add('selected');				
 
 				// collapse others, open self
 				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));

@@ -1,17 +1,31 @@
+/*! 
+
+ *******************************************************************************
+ * Hi!                                                                         *
+ * Drop js@dearstudio.dk an email if you want access to the un-minified source *
+ * (CC BY-NC-SA 4.0)                                                           *
+ *******************************************************************************
+ 
+*/
+
+import './base.css'
+import './menu.css'
+import './fonts.css'
 
 import PAGES from './pages.js'
 import DATA from '../tools/students.json';
-// console.log('students', DATA);
 
 import {nl2br} from './utils.js';
-import {buildMenu} from './menu.js';
+import {buildMenu, clearSelection, collapseAll} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
 
-const MODE = {onoff:true, gridline:false};
-const PROJECTS_ELM = document.querySelector('.projects');
+const MODE = {onoff:true, gridline:true};
+
 let MOUSE_PRESSED = false;
 let SEARCH_STRING = '';
 let PROJECTS_ELM_SCROLLWIDTH = 0;
+
+const PROJECTS_ELM = document.querySelector('.projects');
 
 
 const onHashChanged = () => {
@@ -38,8 +52,8 @@ const onHashChanged = () => {
   
   }else{
     SEARCH_STRING = ''
-    render_projects();
 
+    render_projects();
     render_page( modeToClass() )
   }
 }
@@ -56,15 +70,25 @@ const setup = () => {
 
   document.querySelector('.modetoggle > .onoff').addEventListener('click', (e) => {
     MODE.onoff = !MODE.onoff
+    window.location.hash = ''
     render_toggle();
     render_page( modeToClass() )
     render()
+
+    // clear selection from menu
+    clearSelection()
+    collapseAll()
   })
   document.querySelector('.modetoggle > .gridline').addEventListener('click', (e) => {
     MODE.gridline = !MODE.gridline
+    window.location.hash = ''
     render_toggle();
     render_page( modeToClass() )
     render();
+
+    // clear selection from menu
+    clearSelection()
+    collapseAll()
   })
   
   update()
@@ -127,13 +151,11 @@ const render_search = () => {
     </div>
   `
   document.querySelector('.searchfield').addEventListener("input", (el) => {
-    console.log('input', el.target.value);
     SEARCH_STRING = el.target.value.toLowerCase()
     render_projects()
   })
 
   document.querySelector('.searchfield').addEventListener("change", (el) => {
-    console.log('change', el.target.value);
     window.location.hash = 'search:'+ el.target.value.toLowerCase()
   })
 }
@@ -145,22 +167,11 @@ const render_projects = (show=true) => {
     return;
   }
 
-  let themefilter = window.location.hash.indexOf('#cat:') === 0
+  const themefilter = window.location.hash.indexOf('#cat:') === 0
     ? window.location.hash.split('#cat:')[1]
     : null;
 
-  console.log('themefilter:', themefilter);  
-
-  
   let html = ''
-
-  if( themefilter ){
-    html += `<div class="themefilter"><span></span> ${themefilter}</div>`
-    PROJECTS_ELM.style.marginTop = '30px'
-  }else{
-    PROJECTS_ELM.style.marginTop = '0'
-  }
-
   DATA.forEach( (s,i) => {
     if( themefilter && s.theme != themefilter ){
       // filter out
@@ -171,7 +182,7 @@ const render_projects = (show=true) => {
 
       if( match ){
         html += `<div class="project">
-          <img class="project-image" src="images/${s.id}.jpg" />
+          <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
           <div class="project-meta">${s.name}<br /><br />
             <div class="project-title">${s.title}</div>
           </div>
@@ -179,32 +190,19 @@ const render_projects = (show=true) => {
       }
     
     }else{
-
       html += `<div class="project" data-url="${s.slug}">
-        <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
-        <div class="project-meta">${s.name}<br /><br />
-          <!-- <div class="project-title">${s.title}</div> -->
-        </div>
+        <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
+        <div class="project-meta">${s.name}</div>
       </div>`
-
     }
   })
   PROJECTS_ELM.innerHTML = html
 
   document.querySelectorAll('.project').forEach( el => {
     el.addEventListener('click', () => {
-      console.log( el.getAttribute('data-url') )
       document.location.href = el.getAttribute('data-url')
     })
   })
-
-  if( themefilter ){
-    document.querySelector('.themefilter').addEventListener('click', () => {
-      window.location.hash = ''
-      // clear selection from menu
-      document.querySelectorAll('.menu .selected').forEach(el => el.classList.remove('selected'));
-    })
-  }
 }
 
 const render_toggle = () => {
@@ -212,9 +210,7 @@ const render_toggle = () => {
   document.querySelector('.modetoggle > span.gridline').innerHTML = MODE.gridline ? 'GRID' : 'LINE';
 }
 
-const render = () => {
-  
-  // removeMasonry()
+const render = () => {  
   cleanupOffgrid('.projects')
 
   const className = modeToClass()
@@ -226,38 +222,22 @@ const render = () => {
   }
 
   if( className === 'online' ){
-    // console.log('render scrollWidth #1:', PROJECTS_ELM.scrollWidth);
     PROJECTS_ELM_SCROLLWIDTH = PROJECTS_ELM.scrollWidth
     // duplicate fist nodes
     for(let i=0; i<20; i++){
-      PROJECTS_ELM.appendChild( PROJECTS_ELM.childNodes[i].cloneNode(true) )
+      if( PROJECTS_ELM.childNodes[i] ){
+        PROJECTS_ELM.appendChild( PROJECTS_ELM.childNodes[i].cloneNode(true) )
+      }
     }
 
-    // const s = window.getComputedStyle(PROJECTS_ELM.firstChild)
-    // console.log(s);
-    // console.log(s['margin-right'], s['width']);
     PROJECTS_ELM_SCROLLWIDTH -= 150 // 150 is a magic number :( 
     // el is 200px wide, and has a margin of 40px
-      
-
-    // console.log('render scrollWidth #2:', PROJECTS_ELM_SCROLLWIDTH);
   }
-  
-  // console.log('render mode:', className);
 }
 
 const update = () => {
-
-  // if( MOUSE_PRESSED && MODE.onoff && !MODE.gridline ){
-  //   console.log(PROJECTS_ELM.scrollLeft, PROJECTS_ELM_SCROLLWIDTH )
-  // }
-
-
   if( !MOUSE_PRESSED && MODE.onoff && !MODE.gridline ){
     PROJECTS_ELM.scrollBy(1,0)
-
-    // console.log(PROJECTS_ELM.scrollLeft, PROJECTS_ELM_SCROLLWIDTH )
-    // if( PROJECTS_ELM.scrollLeft === (PROJECTS_ELM.scrollWidth - PROJECTS_ELM.offsetWidth)){
     if( PROJECTS_ELM.scrollLeft > PROJECTS_ELM_SCROLLWIDTH){
       PROJECTS_ELM.scrollTo(0,0)
     }
