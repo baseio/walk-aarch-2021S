@@ -23,8 +23,18 @@ body {
   width: 11px;
 }
 
+/* *::-webkit-scrollbar:horizontal {
+  height: 11px;
+} */
+
 *::-webkit-scrollbar-track {
   background: none;
+  -webkit-box-shadow: none; 
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 *::-webkit-scrollbar-thumb {

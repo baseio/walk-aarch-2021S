@@ -7,10 +7,11 @@ import {nl2br} from './utils.js';
 import {buildMenu} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
 
-const MODE = {onoff:true, gridline:true};
+const MODE = {onoff:true, gridline:false};
 const PROJECTS_ELM = document.querySelector('.projects');
 let MOUSE_PRESSED = false;
 let SEARCH_STRING = '';
+let PROJECTS_ELM_SCROLLWIDTH = 0;
 
 
 const onHashChanged = () => {
@@ -46,7 +47,7 @@ const onHashChanged = () => {
 const setup = () => {
 
   onHashChanged()
-  buildMenu('.menu')
+  buildMenu()
   render_toggle()
 
   window.addEventListener('hashchange', onHashChanged );
@@ -96,6 +97,7 @@ const render_list = (list) => {
     <h2>${listHeadline}</h2>
     ${listContent}
   `
+  document.querySelector('.copy').setAttribute('data-page', list)
   document.querySelector('.copy').innerHTML = html
 }
 
@@ -112,10 +114,12 @@ const render_page = (page) => {
     html = nl2br(html)
   }
 
+  document.querySelector('.copy').setAttribute('data-page', page)
   document.querySelector('.copy').innerHTML = html
 }
 
 const render_search = () => {
+  document.querySelector('.copy').setAttribute('data-page', 'search')
   document.querySelector('.copy').innerHTML = `
     <h2>Search</h2>
     <div>
@@ -151,7 +155,7 @@ const render_projects = (show=true) => {
   let html = ''
 
   if( themefilter ){
-    html += `<div class="themefilter" onclick="window.location.hash='';"><span></span> ${themefilter}</div>`
+    html += `<div class="themefilter"><span></span> ${themefilter}</div>`
     PROJECTS_ELM.style.marginTop = '30px'
   }else{
     PROJECTS_ELM.style.marginTop = '0'
@@ -193,6 +197,14 @@ const render_projects = (show=true) => {
       document.location.href = el.getAttribute('data-url')
     })
   })
+
+  if( themefilter ){
+    document.querySelector('.themefilter').addEventListener('click', () => {
+      window.location.hash = ''
+      // clear selection from menu
+      document.querySelectorAll('.menu .selected').forEach(el => el.classList.remove('selected'));
+    })
+  }
 }
 
 const render_toggle = () => {
@@ -210,22 +222,43 @@ const render = () => {
   PROJECTS_ELM.classList = 'projects '+ className
 
   if( className === 'offgrid' ){
-    // document.querySelectorAll('.projects .project').forEach( el => {
-    //   el.style.top  = Math.random() * 1000 + 'px'
-    //   el.style.left = Math.random() * 1000 + 'px'
-    // })
-    // setRandomPos( document.querySelectorAll('.projects .project') )
-    // renderMasonry( '.projects' );
-    renderOffgrid('.projects');
-
+    renderOffgrid('.projects')
   }
-  console.log('render mode:', className);
+
+  if( className === 'online' ){
+    // console.log('render scrollWidth #1:', PROJECTS_ELM.scrollWidth);
+    PROJECTS_ELM_SCROLLWIDTH = PROJECTS_ELM.scrollWidth
+    // duplicate fist nodes
+    for(let i=0; i<20; i++){
+      PROJECTS_ELM.appendChild( PROJECTS_ELM.childNodes[i].cloneNode(true) )
+    }
+
+    // const s = window.getComputedStyle(PROJECTS_ELM.firstChild)
+    // console.log(s);
+    // console.log(s['margin-right'], s['width']);
+    PROJECTS_ELM_SCROLLWIDTH -= 150 // 150 is a magic number :( 
+    // el is 200px wide, and has a margin of 40px
+      
+
+    // console.log('render scrollWidth #2:', PROJECTS_ELM_SCROLLWIDTH);
+  }
+  
+  // console.log('render mode:', className);
 }
 
 const update = () => {
+
+  // if( MOUSE_PRESSED && MODE.onoff && !MODE.gridline ){
+  //   console.log(PROJECTS_ELM.scrollLeft, PROJECTS_ELM_SCROLLWIDTH )
+  // }
+
+
   if( !MOUSE_PRESSED && MODE.onoff && !MODE.gridline ){
     PROJECTS_ELM.scrollBy(1,0)
-    if( PROJECTS_ELM.scrollLeft === (PROJECTS_ELM.scrollWidth - PROJECTS_ELM.offsetWidth)){
+
+    // console.log(PROJECTS_ELM.scrollLeft, PROJECTS_ELM_SCROLLWIDTH )
+    // if( PROJECTS_ELM.scrollLeft === (PROJECTS_ELM.scrollWidth - PROJECTS_ELM.offsetWidth)){
+    if( PROJECTS_ELM.scrollLeft > PROJECTS_ELM_SCROLLWIDTH){
       PROJECTS_ELM.scrollTo(0,0)
     }
   }

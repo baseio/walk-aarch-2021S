@@ -27,7 +27,7 @@
     TBA
   `,
     "curators-voice": `
-    <h2>curators voice</h2>
+    <h2>Curators voice</h2>
 
     [DK]
 
@@ -76,8 +76,9 @@ STAY ONLINE.
     credits: `
     <h2>Credits</h2>
 
-    Thanks to
+    Thanks to<br />
     <img src="assets/augustinus-fonden.png" />
+    <br />
 
     <strong>Curatorial Concept</strong>: Karen Kjaergaard, curator & Head of Exhibitions, AARCH 
 
@@ -620,6 +621,7 @@ STAY ONLINE.
 
   // src/menu.js
   var menudata = [
+    ["ON/OFF", "", null],
     ["Architects", "list:architects", null],
     [
       "Categories",
@@ -647,7 +649,7 @@ STAY ONLINE.
       ]
     ]
   ];
-  var buildMenu = (selector) => {
+  var buildMenu = (selector = ".menu") => {
     console.log("buildMenu selector", selector);
     let html = "";
     menudata.forEach((m) => {

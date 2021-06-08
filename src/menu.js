@@ -1,4 +1,5 @@
 const menudata = [
+	['ON/OFF', '', null],
 	['Architects', 'list:architects', null],
 	['Categories', 'categories',
 		[
@@ -24,7 +25,7 @@ const menudata = [
 ]
 
 
-export const buildMenu = (selector) => {
+export const buildMenu = (selector = '.menu') => {
 
 	console.log('buildMenu selector', selector);
 	

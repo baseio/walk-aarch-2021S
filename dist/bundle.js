@@ -27,7 +27,7 @@
     TBA
   `,
     "curators-voice": `
-    <h2>curators voice</h2>
+    <h2>Curators voice</h2>
 
     [DK]
 
@@ -76,8 +76,9 @@ STAY ONLINE.
     credits: `
     <h2>Credits</h2>
 
-    Thanks to
+    Thanks to<br />
     <img src="assets/augustinus-fonden.png" />
+    <br />
 
     <strong>Curatorial Concept</strong>: Karen Kjaergaard, curator & Head of Exhibitions, AARCH 
 
@@ -620,6 +621,7 @@ STAY ONLINE.
 
   // src/menu.js
   var menudata = [
+    ["ON/OFF", "", null],
     ["Architects", "list:architects", null],
     [
       "Categories",
@@ -647,7 +649,7 @@ STAY ONLINE.
       ]
     ]
   ];
-  var buildMenu = (selector) => {
+  var buildMenu = (selector = ".menu") => {
     console.log("buildMenu selector", selector);
     let html = "";
     menudata.forEach((m) => {
@@ -716,10 +718,11 @@ STAY ONLINE.
 
   // src/index.js
   console.log("students", students_default);
-  var MODE = {onoff: true, gridline: true};
+  var MODE = {onoff: true, gridline: false};
   var PROJECTS_ELM = document.querySelector(".projects");
   var MOUSE_PRESSED = false;
   var SEARCH_STRING = "";
+  var PROJECTS_ELM_SCROLLWIDTH = 0;
   var onHashChanged = () => {
     const h = window.location.hash;
     console.log("onHashChanged", h);
@@ -745,7 +748,7 @@ STAY ONLINE.
   };
   var setup = () => {
     onHashChanged();
-    buildMenu(".menu");
+    buildMenu();
     render_toggle();
     window.addEventListener("hashchange", onHashChanged);
     window.addEventListener("mousedown", () => {
@@ -790,6 +793,7 @@ STAY ONLINE.
     <h2>${listHeadline}</h2>
     ${listContent}
   `;
+    document.querySelector(".copy").setAttribute("data-page", list);
     document.querySelector(".copy").innerHTML = html;
   };
   var render_page = (page) => {
@@ -802,9 +806,11 @@ STAY ONLINE.
       html = html.trim();
       html = nl2br(html);
     }
+    document.querySelector(".copy").setAttribute("data-page", page);
     document.querySelector(".copy").innerHTML = html;
   };
   var render_search = () => {
+    document.querySelector(".copy").setAttribute("data-page", "search");
     document.querySelector(".copy").innerHTML = `
     <h2>Search</h2>
     <div>
@@ -830,7 +836,7 @@ STAY ONLINE.
     console.log("themefilter:", themefilter);
     let html = "";
     if (themefilter) {
-      html += `<div class="themefilter" onclick="window.location.hash='';"><span></span> ${themefilter}</div>`;
+      html += `<div class="themefilter"><span></span> ${themefilter}</div>`;
       PROJECTS_ELM.style.marginTop = "30px";
     } else {
       PROJECTS_ELM.style.marginTop = "0";
@@ -864,6 +870,12 @@ STAY ONLINE.
         document.location.href = el.getAttribute("data-url");
       });
     });
+    if (themefilter) {
+      document.querySelector(".themefilter").addEventListener("click", () => {
+        window.location.hash = "";
+        document.querySelectorAll(".menu .selected").forEach((el) => el.classList.remove("selected"));
+      });
+    }
   };
   var render_toggle = () => {
     document.querySelector(".modetoggle > span.onoff").innerHTML = MODE.onoff ? "ON" : "OFF";
@@ -876,12 +888,18 @@ STAY ONLINE.
     if (className === "offgrid") {
       renderOffgrid(".projects");
     }
-    console.log("render mode:", className);
+    if (className === "online") {
+      PROJECTS_ELM_SCROLLWIDTH = PROJECTS_ELM.scrollWidth;
+      for (let i = 0; i < 20; i++) {
+        PROJECTS_ELM.appendChild(PROJECTS_ELM.childNodes[i].cloneNode(true));
+      }
+      PROJECTS_ELM_SCROLLWIDTH -= 150;
+    }
   };
   var update = () => {
     if (!MOUSE_PRESSED && MODE.onoff && !MODE.gridline) {
       PROJECTS_ELM.scrollBy(1, 0);
-      if (PROJECTS_ELM.scrollLeft === PROJECTS_ELM.scrollWidth - PROJECTS_ELM.offsetWidth) {
+      if (PROJECTS_ELM.scrollLeft > PROJECTS_ELM_SCROLLWIDTH) {
         PROJECTS_ELM.scrollTo(0, 0);
       }
     }
