@@ -11,17 +11,16 @@
     "serve": "cd dist && here",
     "build": "esbuild src/index.js --target=es2016 --bundle --outfile=dist/bundle.js && esbuild src/index.mobile.js --target=es2016 --bundle --outfile=dist/bundle.mobile.js",
     "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html",
-    "_build": "npm run build_desktop && npm run build_mobile",
-    "_build_desktop": "esbuild src/index.js --target=es2016 --bundle --outfile=dist/bundle.js",
-    "_build_mobile": "esbuild src/index.mobile.js --target=es2016 --bundle --outfile=dist/bundle.mobile.js"
+    "release": "npm run build && npm run _release-all",
+    "_release-all": "npm run _release-main && npm run _release-mobile",
+    "_release-main": "terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
+    "_release-mobile": "terser ./dist/bundle.mobile.js --comments -c drop_console=true -m -o ./dist/bundle.mobile.js"
   },
   "keywords": [],
   "author": "Jørgen Skogmo <js@dearstudio.dk>",
   "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
   "devDependencies": {
-    "stupid-sheets": "0.0.3"
-  },
-  "dependencies": {
-    "macy": "^2.5.1"
+    "stupid-sheets": "0.0.3",
+    "terser": "^5.7.0"
   }
 }
