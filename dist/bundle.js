@@ -407,7 +407,7 @@ STAY ONLINE.
       id: "17073",
       name: "Mischa Josefine St\xE6hr",
       title: "Helt ude i hampen - Et b\xE6redygtigt bof\xE6llesskab",
-      theme: "",
+      theme: "building-culture",
       slug: "https://afgang.aarch.dk/2021/student/mischa-josefine-staehr/"
     },
     {

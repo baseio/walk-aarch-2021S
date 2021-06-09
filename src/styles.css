@@ -57,6 +57,7 @@
   user-select: none;
   pointer-events: all;
   cursor: pointer;
+  position: absolute; /* remove from grid */
 }
 
 .content {

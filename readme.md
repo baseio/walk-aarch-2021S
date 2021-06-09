@@ -2,8 +2,8 @@
 
 Summer graduation, 2021
 
+
 ## todo
 - [ ] browser tests
 - [ ] analytics: await Lars
-- [ ] rectors speech @friday
-- [ ] prizes @after launch
+- [ ] rectors speech @f
