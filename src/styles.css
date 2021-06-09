@@ -10,11 +10,12 @@
   background-image: url(assets/aarch.svg);
   background-repeat: no-repeat;
   background-color: #fff;
+  z-index: 10;
 }
 
 #app {
   display: grid;
-  grid-template-columns: minmax(170px, 20vw) 1fr;
+  grid-template-columns: minmax(220px, 20vw) 1fr;
   grid-template-rows: 1fr 100fr 40px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -65,7 +66,7 @@
 .copy {
   user-select: text;
   max-height: calc(100vh - 80px);
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-right: 40px;
   font-size: 17px;
   line-height: 170%;
@@ -93,6 +94,8 @@
   font-size: 20px;
   line-height: 160%;
   font-weight: 600;
+  width: 45%;
+  display:inline-block;
 }
 
 /**/
@@ -108,8 +111,11 @@
 
 
 .projects.online {
-  align-self: flex-end;
-  align-items: baseline;
+  /* align-self: flex-end;
+  align-items: baseline; */
+
+  align-items: flex-end;
+
   overflow-y: hidden;
   overflow-x: scroll;
 }
@@ -156,7 +162,8 @@
 
 /* full width */
 .projects.online, .projects.offline {
-  margin-left: -20vw;
+  /* margin-left: -20vw; */
+  margin-left: calc(max(220px, 20vw) * -1);
 }
 
 
@@ -175,4 +182,89 @@
 
 .project .project-image {
   width: inherit;
+}
+
+
+/* mobile */
+body.mobile {
+  background-color: lightcoral;
+}
+
+body.mobile #app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 20px);
+  overflow-x: clip;
+  overflow-y: scroll;
+  margin-right: 5px;
+}
+
+body.mobile .menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: bisque;
+  text-align: end;
+  padding-top: 70px;
+  padding-right: 20px;
+
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+
+  display: none;
+}
+
+body.mobile  .menu.open {
+  display: block;
+}
+
+body.mobile .modetoggle {
+  display: none;
+}
+
+body.mobile .content {
+  padding: 20px;
+}
+
+body.mobile .copy {
+  padding-right: 20px;
+  max-height: 100vh;
+  overflow: initial;
+  padding-bottom: 1em;
+}
+
+body.mobile .copy[data-page="architects"] {
+  display: flex;
+  flex-direction: column;
+}
+
+body.mobile .copy[data-page="architects"] a {
+  width: 100%;
+}
+
+body.mobile .project {
+  width: 85px;
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 20px;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+body.mobile .projects.online, 
+body.mobile .projects.offline,  
+body.mobile .projects.ongrid, 
+body.mobile .projects.offgrid {
+  margin: 0 !important;
+}
+
+body.mobile .projects.offline {
+  height: 100vh;
+  width: calc(100vw - 10px);
+  position: relative;
+  left: -20px;
 }

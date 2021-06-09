@@ -1,17 +1,14 @@
 {
   "name": "walk-aarch-2021S",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "watchexec --exts js,css,html -i /*bundle.js -i /*bundle.mobile.js npm run build",
+    "watch": "watchexec --exts js,css,html -i *bundle* npm run build",
     "serve": "cd dist && here",
-    "build": "esbuild src/index.js --target=es2016 --external:fonts/* --bundle --outfile=dist/bundle.js",
-    "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html",
-    "release": "npm run build && npm run _release-all",
-    "_release-all": "npm run _release-main && npm run _release-mobile",
-    "_release-main": "terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
-    "_release-mobile": "terser ./dist/bundle.mobile.js --comments -c drop_console=true -m -o ./dist/bundle.mobile.js"
+    "build": "esbuild src/index.js --target=es2016 --external:fonts/* --external:assets/* --bundle --outfile=./dist/bundle.js",
+    "release": "terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
+    "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html"
   },
   "keywords": [],
   "author": "Jørgen Skogmo <js@dearstudio.dk>",

@@ -719,6 +719,24 @@ STAY ONLINE.
     });
   };
 
+  // src/modes.js
+  var modeToClass = () => {
+    let className = "";
+    if (MODE.onoff === false && MODE.gridline === false) {
+      className = "offline";
+    }
+    if (MODE.onoff === true && MODE.gridline === false) {
+      className = "online";
+    }
+    if (MODE.onoff === true && MODE.gridline === true) {
+      className = "ongrid";
+    }
+    if (MODE.onoff === false && MODE.gridline === true) {
+      className = "offgrid";
+    }
+    return className;
+  };
+
   // src/index.js
   /*! 
   
@@ -729,11 +747,29 @@ STAY ONLINE.
    *******************************************************************************
    
   */
-  var MODE = {onoff: true, gridline: true};
+  var MODE2 = {onoff: true, gridline: true};
   var MOUSE_PRESSED = false;
   var SEARCH_STRING = "";
   var PROJECTS_ELM_SCROLLWIDTH = 0;
+  var isMobile = false;
+  var throttleResizeTimeout = null;
   var PROJECTS_ELM = document.querySelector(".projects");
+  var onResized = () => {
+    console.log("onResized");
+    if (screen.width <= 699) {
+      document.body.classList.add("mobile");
+      isMobile = true;
+    } else {
+      document.body.classList.remove("mobile");
+      isMobile = false;
+    }
+  };
+  var throttleResized = () => {
+    if (throttleResizeTimeout) {
+      clearTimeout(throttleResizeTimeout);
+    }
+    throttleResizeTimeout = setTimeout(onResized, 10);
+  };
   var onHashChanged = () => {
     const h = window.location.hash;
     console.log("onHashChanged", h);
@@ -744,8 +780,8 @@ STAY ONLINE.
       render_page(h.split("#page:")[1]);
     } else if (h.indexOf("#search") === 0) {
       SEARCH_STRING = h.split("#search:")[1];
-      MODE.onoff = true;
-      MODE.gridline = true;
+      MODE2.onoff = true;
+      MODE2.gridline = true;
       render_projects();
       render_search();
     } else if (h.indexOf("#list") === 0) {
@@ -756,11 +792,31 @@ STAY ONLINE.
       render_projects();
       render_page(modeToClass());
     }
+    if (isMobile) {
+      console.log("Mobile onHashChanged");
+      const h2 = document.querySelector(".copy > h2");
+      if (h2) {
+        console.log("has h2");
+        h2.addEventListener("click", () => {
+          console.log("h2 current:", modeToClass());
+          nextMode();
+          window.location.hash = "";
+          render_page(modeToClass());
+          render();
+          clearSelection();
+          collapseAll();
+          onHashChanged();
+        });
+      }
+    }
   };
   var setup = () => {
+    window.MODE = MODE2;
+    onResized();
     onHashChanged();
     buildMenu();
     render_toggle();
+    window.addEventListener("resize", throttleResized);
     window.addEventListener("hashchange", onHashChanged);
     window.addEventListener("mousedown", () => {
       MOUSE_PRESSED = true;
@@ -769,7 +825,7 @@ STAY ONLINE.
       MOUSE_PRESSED = false;
     }, false);
     document.querySelector(".modetoggle > .onoff").addEventListener("click", (e) => {
-      MODE.onoff = !MODE.onoff;
+      MODE2.onoff = !MODE2.onoff;
       window.location.hash = "";
       render_toggle();
       render_page(modeToClass());
@@ -778,13 +834,24 @@ STAY ONLINE.
       collapseAll();
     });
     document.querySelector(".modetoggle > .gridline").addEventListener("click", (e) => {
-      MODE.gridline = !MODE.gridline;
+      MODE2.gridline = !MODE2.gridline;
       window.location.hash = "";
       render_toggle();
       render_page(modeToClass());
       render();
       clearSelection();
       collapseAll();
+    });
+    document.querySelector(".logo").addEventListener("click", () => {
+      if (isMobile)
+        document.querySelector(".menu").classList.toggle("open");
+    });
+    document.querySelectorAll('.menu [data-menu-action="go"]').forEach((el) => {
+      el.addEventListener("click", () => {
+        if (isMobile) {
+          document.querySelector(".menu").classList.remove("open");
+        }
+      });
     });
     update();
     render();
@@ -801,9 +868,9 @@ STAY ONLINE.
     let listContent = "";
     if (list === "architects") {
       listHeadline = "Architects";
-      listContent = "";
+      listContent = "<br />";
       students_default.forEach((s) => {
-        listContent += `<a href="" style="width:45%;display:inline-block;">${s.name}</a>`;
+        listContent += `<a href="${s.slug}">${s.name}</a>`;
       });
     }
     let html = `
@@ -856,7 +923,7 @@ STAY ONLINE.
         const match = search.indexOf(SEARCH_STRING) > -1;
         if (match) {
           html += `<div class="project">
-          <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
+          <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
           <div class="project-meta">${s.name}<br /><br />
             <div class="project-title">${s.title}</div>
           </div>
@@ -864,7 +931,7 @@ STAY ONLINE.
         }
       } else {
         html += `<div class="project" data-url="${s.slug}">
-        <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
+        <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
         <div class="project-meta">${s.name}</div>
       </div>`;
       }
@@ -877,10 +944,11 @@ STAY ONLINE.
     });
   };
   var render_toggle = () => {
-    document.querySelector(".modetoggle > span.onoff").innerHTML = MODE.onoff ? "ON" : "OFF";
-    document.querySelector(".modetoggle > span.gridline").innerHTML = MODE.gridline ? "GRID" : "LINE";
+    document.querySelector(".modetoggle > span.onoff").innerHTML = MODE2.onoff ? "ON" : "OFF";
+    document.querySelector(".modetoggle > span.gridline").innerHTML = MODE2.gridline ? "GRID" : "LINE";
   };
   var render = () => {
+    PROJECTS_ELM.querySelectorAll("div[data-clone]").forEach((el) => el.remove());
     cleanupOffgrid(".projects");
     const className = modeToClass();
     PROJECTS_ELM.classList = "projects " + className;
@@ -891,36 +959,22 @@ STAY ONLINE.
       PROJECTS_ELM_SCROLLWIDTH = PROJECTS_ELM.scrollWidth;
       for (let i = 0; i < 20; i++) {
         if (PROJECTS_ELM.childNodes[i]) {
-          PROJECTS_ELM.appendChild(PROJECTS_ELM.childNodes[i].cloneNode(true));
+          const el = PROJECTS_ELM.childNodes[i].cloneNode(true);
+          el.setAttribute("data-clone", true);
+          PROJECTS_ELM.appendChild(el);
         }
       }
       PROJECTS_ELM_SCROLLWIDTH -= 150;
     }
   };
   var update = () => {
-    if (!MOUSE_PRESSED && MODE.onoff && !MODE.gridline) {
+    if (!MOUSE_PRESSED && MODE2.onoff && !MODE2.gridline) {
       PROJECTS_ELM.scrollBy(1, 0);
       if (PROJECTS_ELM.scrollLeft > PROJECTS_ELM_SCROLLWIDTH) {
         PROJECTS_ELM.scrollTo(0, 0);
       }
     }
     requestAnimationFrame(update);
-  };
-  var modeToClass = () => {
-    let className = "";
-    if (MODE.onoff === false && MODE.gridline === false) {
-      className = "offline";
-    }
-    if (MODE.onoff === true && MODE.gridline === false) {
-      className = "online";
-    }
-    if (MODE.onoff === true && MODE.gridline === true) {
-      className = "ongrid";
-    }
-    if (MODE.onoff === false && MODE.gridline === true) {
-      className = "offgrid";
-    }
-    return className;
   };
   setup();
 })();

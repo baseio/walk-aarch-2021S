@@ -118,3 +118,216 @@ a:hover {
   overflow: unset;
   margin: 30px 0px;
 }
+
+/* src/styles.css */
+.logo {
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(assets/aarch.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  z-index: 10;
+}
+#app {
+  display: grid;
+  grid-template-columns: minmax(220px, 20vw) 1fr;
+  grid-template-rows: 1fr 100fr 40px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 20px;
+  height: calc(100vh - 40px);
+}
+.themefilter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #00F;
+  margin-top: -30px;
+}
+.themefilter > span {
+  color: #000;
+  background-image: url(assets/x-3-000.svg);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.searchfield {
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: "Univers LT W02 55 Roman", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 30px;
+}
+.menu {
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+.content {
+  padding-top: 10px;
+}
+.copy {
+  user-select: text;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding-right: 40px;
+  font-size: 17px;
+  line-height: 170%;
+}
+.copy > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  line-height: 100%;
+  margin-bottom: 0;
+}
+.copy > img {
+  width: 230px;
+}
+.modetoggle {
+  display: flex;
+  align-items: flex-end;
+  font-size: 25px;
+  line-height: 100%;
+}
+.copy[data-page=architects] a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 600;
+  width: 45%;
+  display: inline-block;
+}
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.projects.online {
+  align-items: flex-end;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.projects.online::-webkit-scrollbar {
+  height: 11px;
+}
+.projects.offline {
+  background-color: #000;
+}
+.projects.offline > * {
+  display: none;
+}
+.projects.ongrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin-bottom: -40px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.projects.offgrid {
+  display: block;
+  flex-direction: unset;
+  flex-wrap: unset;
+  margin-bottom: -40px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.projects.offgrid > .project {
+  float: left;
+}
+.offgrid-spacer {
+  margin: 0;
+  border: none;
+}
+.projects.online,
+.projects.offline {
+  margin-left: calc(max(220px, 20vw) * -1);
+}
+.project {
+  width: 200px;
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 20px;
+  margin-left: 0;
+  margin-right: 40px;
+}
+.project .project-image {
+  width: inherit;
+}
+body.mobile {
+  background-color: lightcoral;
+}
+body.mobile #app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 20px);
+  overflow-x: clip;
+  overflow-y: scroll;
+  margin-right: 5px;
+}
+body.mobile .menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: bisque;
+  text-align: end;
+  padding-top: 70px;
+  padding-right: 20px;
+  user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+  display: none;
+}
+body.mobile .menu.open {
+  display: block;
+}
+body.mobile .modetoggle {
+  display: none;
+}
+body.mobile .content {
+  padding: 20px;
+}
+body.mobile .copy {
+  padding-right: 20px;
+  max-height: 100vh;
+  overflow: initial;
+  padding-bottom: 1em;
+}
+body.mobile .copy[data-page=architects] {
+  display: flex;
+  flex-direction: column;
+}
+body.mobile .copy[data-page=architects] a {
+  width: 100%;
+}
+body.mobile .project {
+  width: 85px;
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 20px;
+  margin-left: 0;
+  margin-right: 10px;
+}
+body.mobile .projects.online,
+body.mobile .projects.offline,
+body.mobile .projects.ongrid,
+body.mobile .projects.offgrid {
+  margin: 0 !important;
+}
+body.mobile .projects.offline {
+  height: 100vh;
+  width: calc(100vw - 10px);
+  position: relative;
+  left: -20px;
+}

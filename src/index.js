@@ -11,6 +11,7 @@
 import './base.css'
 import './menu.css'
 import './fonts.css'
+import './styles.css'
 
 import PAGES from './pages.js'
 import DATA from '../tools/students.json';
@@ -18,14 +19,35 @@ import DATA from '../tools/students.json';
 import {nl2br} from './utils.js';
 import {buildMenu, clearSelection, collapseAll} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
+import {modeToClass} from './modes.js'
 
 const MODE = {onoff:true, gridline:true};
 
 let MOUSE_PRESSED = false;
 let SEARCH_STRING = '';
 let PROJECTS_ELM_SCROLLWIDTH = 0;
+let isMobile = false
+let throttleResizeTimeout = null
 
 const PROJECTS_ELM = document.querySelector('.projects');
+
+const onResized = () => {
+  console.log('onResized');
+  if( screen.width <= 699 ){
+    document.body.classList.add('mobile')
+    isMobile = true
+  }else{
+    document.body.classList.remove('mobile')
+    isMobile = false
+  }
+}
+
+const throttleResized = () => {
+  if( throttleResizeTimeout ){
+    clearTimeout( throttleResizeTimeout )
+  }
+  throttleResizeTimeout = setTimeout(onResized, 10)
+}
 
 
 const onHashChanged = () => {
@@ -56,14 +78,40 @@ const onHashChanged = () => {
     render_projects();
     render_page( modeToClass() )
   }
+
+  if( isMobile ){
+    console.log('Mobile onHashChanged');
+    const h2 = document.querySelector('.copy > h2')
+    if( h2 ){
+      console.log('has h2');
+      h2.addEventListener('click', () => {
+        console.log('h2 current:', modeToClass()  );
+        nextMode()
+
+        window.location.hash = ''
+        
+        render_page( modeToClass() )
+        render()
+        clearSelection()
+        collapseAll()
+
+        onHashChanged()
+      })
+    }
+  }
+
 }
 
 const setup = () => {
 
+  window.MODE = MODE
+
+  onResized()
   onHashChanged()
   buildMenu()
   render_toggle()
 
+  window.addEventListener('resize', throttleResized );
   window.addEventListener('hashchange', onHashChanged );
   window.addEventListener('mousedown', () => { MOUSE_PRESSED = true }, false);
   window.addEventListener('mouseup', () => { MOUSE_PRESSED = false }, false);
@@ -90,6 +138,19 @@ const setup = () => {
     clearSelection()
     collapseAll()
   })
+
+
+  document.querySelector('.logo').addEventListener('click', () => {
+    if( isMobile) document.querySelector('.menu').classList.toggle('open')
+  });
+
+  document.querySelectorAll('.menu [data-menu-action="go"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if( isMobile) {
+        document.querySelector('.menu').classList.remove('open')
+      }
+    })
+  });
   
   update()
   render()
@@ -110,9 +171,9 @@ const render_list = (list) => {
 
   if( list === 'architects' ){
     listHeadline = 'Architects'
-    listContent = ''
+    listContent = '<br />'
     DATA.forEach( s => {
-      listContent += `<a href="" style="width:45%;display:inline-block;">${s.name}</a>`
+      listContent += `<a href="${s.slug}">${s.name}</a>`
     })
   }
   
@@ -182,7 +243,7 @@ const render_projects = (show=true) => {
 
       if( match ){
         html += `<div class="project">
-          <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
+          <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
           <div class="project-meta">${s.name}<br /><br />
             <div class="project-title">${s.title}</div>
           </div>
@@ -191,7 +252,7 @@ const render_projects = (show=true) => {
     
     }else{
       html += `<div class="project" data-url="${s.slug}">
-        <img class="project-image" src="images/${s.id}.jpg" width="200" height="inherit" alt="${s.title}"/>
+        <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
         <div class="project-meta">${s.name}</div>
       </div>`
     }
@@ -211,6 +272,10 @@ const render_toggle = () => {
 }
 
 const render = () => {  
+
+  // make sure no online clones are left
+  PROJECTS_ELM.querySelectorAll('div[data-clone]').forEach( el => el.remove() )
+
   cleanupOffgrid('.projects')
 
   const className = modeToClass()
@@ -223,15 +288,20 @@ const render = () => {
 
   if( className === 'online' ){
     PROJECTS_ELM_SCROLLWIDTH = PROJECTS_ELM.scrollWidth
+
     // duplicate fist nodes
     for(let i=0; i<20; i++){
       if( PROJECTS_ELM.childNodes[i] ){
-        PROJECTS_ELM.appendChild( PROJECTS_ELM.childNodes[i].cloneNode(true) )
+        const el = PROJECTS_ELM.childNodes[i].cloneNode(true)
+        el.setAttribute('data-clone', true)
+        PROJECTS_ELM.appendChild( el )
+        // PROJECTS_ELM.appendChild( PROJECTS_ELM.childNodes[i].cloneNode(true) )
       }
     }
 
     PROJECTS_ELM_SCROLLWIDTH -= 150 // 150 is a magic number :( 
     // el is 200px wide, and has a margin of 40px
+
   }
 }
 
@@ -245,21 +315,11 @@ const update = () => {
   requestAnimationFrame( update )
 }
 
-const modeToClass = () => {
-  let className = ''
-  if( MODE.onoff === false && MODE.gridline === false ){
-    className = 'offline'
-  }
-  if( MODE.onoff === true && MODE.gridline === false ){
-    className = 'online'
-  }
-  if( MODE.onoff === true && MODE.gridline === true ){
-    className = 'ongrid'
-  }
-  if( MODE.onoff === false && MODE.gridline === true ){
-    className = 'offgrid'
-  }
-  return className
-}
-
 setup()
+
+export {
+  render_page,
+  render,
+  clearSelection,
+  collapseAll,
+}
