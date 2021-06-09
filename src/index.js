@@ -19,7 +19,7 @@ import DATA from '../tools/students.json';
 import {nl2br} from './utils.js';
 import {buildMenu, clearSelection, collapseAll} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
-import {modeToClass} from './modes.js'
+import {modeToClass, nextMode } from './modes.js'
 
 const MODE = {onoff:true, gridline:true};
 
@@ -279,6 +279,16 @@ const render = () => {
   cleanupOffgrid('.projects')
 
   const className = modeToClass()
+
+  // fullwidth views
+  if( className === 'online' || className === 'offline' ){
+    document.querySelector('#menuspacer').style.display = 'none'
+    document.querySelector('.menu').style.position = 'unset'
+  }else{
+    document.querySelector('#menuspacer').style.display = 'block'
+    document.querySelector('.menu').style.position = 'absolute'
+  }
+
 
   PROJECTS_ELM.classList = 'projects '+ className
 
