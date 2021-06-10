@@ -15,7 +15,6 @@ import './styles.css'
 
 import PAGES from './pages.js'
 import DATA from '../tools/students.json';
-
 import {nl2br} from './utils.js';
 import {buildMenu, clearSelection, collapseAll} from './menu.js';
 import {renderOffgrid, cleanupOffgrid} from './layout-offgrid.js'
@@ -30,25 +29,6 @@ let isMobile = false
 let throttleResizeTimeout = null
 
 const PROJECTS_ELM = document.querySelector('.projects');
-
-const onResized = () => {
-  console.log('onResized');
-  if( screen.width <= 699 ){
-    document.body.classList.add('mobile')
-    isMobile = true
-  }else{
-    document.body.classList.remove('mobile')
-    isMobile = false
-  }
-}
-
-const throttleResized = () => {
-  if( throttleResizeTimeout ){
-    clearTimeout( throttleResizeTimeout )
-  }
-  throttleResizeTimeout = setTimeout(onResized, 10)
-}
-
 
 const onHashChanged = () => {
   const h = window.location.hash
@@ -118,25 +98,32 @@ const setup = () => {
 
   document.querySelector('.modetoggle > .onoff').addEventListener('click', (e) => {
     MODE.onoff = !MODE.onoff
-    window.location.hash = ''
+
+    const iscat = window.location.hash.indexOf('cat:') > 0
+    if( !iscat ){
+      window.location.hash = ''
+      clearSelection()
+      collapseAll()
+    }
+
     render_toggle();
     render_page( modeToClass() )
     render()
 
-    // clear selection from menu
-    clearSelection()
-    collapseAll()
   })
   document.querySelector('.modetoggle > .gridline').addEventListener('click', (e) => {
     MODE.gridline = !MODE.gridline
-    window.location.hash = ''
+
+    const iscat = window.location.hash.indexOf('cat:') > 0
+    if( !iscat ){
+      window.location.hash = ''
+      clearSelection()
+      collapseAll()
+    }
+
     render_toggle();
     render_page( modeToClass() )
     render();
-
-    // clear selection from menu
-    clearSelection()
-    collapseAll()
   })
 
 
@@ -325,11 +312,23 @@ const update = () => {
   requestAnimationFrame( update )
 }
 
-setup()
-
-export {
-  render_page,
-  render,
-  clearSelection,
-  collapseAll,
+const onResized = () => {
+  console.log('onResized');
+  if( screen.width <= 699 ){
+    document.body.classList.add('mobile')
+    isMobile = true
+  }else{
+    document.body.classList.remove('mobile')
+    isMobile = false
+  }
 }
+
+const throttleResized = () => {
+  if( throttleResizeTimeout ){
+    clearTimeout( throttleResizeTimeout )
+  }
+  throttleResizeTimeout = setTimeout(onResized, 10)
+}
+
+
+setup()
