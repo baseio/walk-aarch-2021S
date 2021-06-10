@@ -7,13 +7,15 @@
     "watch": "watchexec --exts js,css,html -i *bundle* npm run build",
     "serve": "cd dist && here",
     "build": "esbuild src/index.js --target=es2016 --external:fonts/* --external:assets/* --bundle --outfile=./dist/bundle.js",
-    "release": "terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
-    "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html"
+    "release": "npm run bumpversion && terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
+    "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html",
+    "bumpversion": "version-bump cli --bump patch"
   },
   "keywords": [],
   "author": "Jørgen Skogmo <js@dearstudio.dk>",
   "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
   "devDependencies": {
+    "@theo.gravity/version-bump": "^2.0.14",
     "stupid-sheets": "0.0.3",
     "terser": "^5.7.0"
   }
