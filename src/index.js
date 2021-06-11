@@ -67,7 +67,6 @@ const onHashChanged = () => {
       h2.addEventListener('click', () => {
         console.log('h2 current:', modeToClass()  );
         nextMode()
-
         window.location.hash = ''
         
         render_page( modeToClass() )
@@ -76,6 +75,8 @@ const onHashChanged = () => {
         collapseAll()
 
         onHashChanged()
+
+        render()
       })
     }
   }
@@ -150,6 +151,42 @@ const setup = () => {
   if( h.indexOf('#cat:') === 0 ){
     document.querySelector('div[data-menu-key="categories"]').click()
   }
+
+  
+  render_intro()
+}
+
+const render_intro = () => {
+  if( window.location.hash != '' ){
+    document.querySelector('.intro').style.display = 'none'
+    return
+  }
+
+  if( isMobile ){
+    document.querySelector('.intro').innerHTML = `
+      <video src="assets/1080x1920.mp4" autoplay muted playsinline></video>`
+  }else{
+    document.querySelector('.intro').innerHTML = `
+      <video src="assets/1920x1080.mp4" autoplay muted playsinline></video>`
+  }
+
+  document.querySelector('.intro > video').addEventListener('click', (e) => {
+    document.querySelector('.intro').classList.add('done')
+    setTimeout( () => {
+      document.querySelector('.intro').classList.add('hidden')
+    }, 500)
+  });
+
+  document.querySelector('.intro > video').addEventListener('loadeddata', (e) => {
+    setTimeout( () => {
+      document.querySelector('.intro').classList.add('done')
+      setTimeout( () => {
+        document.querySelector('.intro').classList.add('hidden')
+      }, 500)
+    }, Math.floor(e.target.duration * 1000) )
+  })
+
+
 }
 
 const render_list = (list) => {
@@ -209,6 +246,14 @@ const render_search = () => {
 }
 
 const render_projects = (show=true) => {
+  console.log('render_projects', isMobile);
+
+  const isSearch = SEARCH_STRING != '';
+
+  if( isSearch ){
+    MODE.onoff = true
+    MODE.gridline = true
+  }
 
   if( show === false ){
     PROJECTS_ELM.innerHTML = ''
@@ -223,7 +268,7 @@ const render_projects = (show=true) => {
   DATA.forEach( (s,i) => {
     if( themefilter && s.theme != themefilter ){
       // filter out
-    }else if( SEARCH_STRING != '' ){
+    }else if( isSearch ){
 
       const search = `${s.name}`.toLowerCase()
       const match = search.indexOf(SEARCH_STRING) > -1
@@ -231,7 +276,7 @@ const render_projects = (show=true) => {
       if( match ){
         html += `<div class="project">
           <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
-          <div class="project-meta">${s.name}<br /><br />
+          <div class="project-meta"><strong>${s.name}</strong><br />
             <div class="project-title">${s.title}</div>
           </div>
         </div>`
@@ -244,6 +289,13 @@ const render_projects = (show=true) => {
       </div>`
     }
   })
+
+  if( isSearch ){
+    PROJECTS_ELM.classList.add('search')
+  }else{
+    PROJECTS_ELM.classList.remove('search')
+  }
+
   PROJECTS_ELM.innerHTML = html
 
   document.querySelectorAll('.project').forEach( el => {
@@ -321,6 +373,10 @@ const onResized = () => {
     document.body.classList.remove('mobile')
     isMobile = false
   }
+
+  if( iOS() ){
+    document.body.classList.add('ios')
+  }
 }
 
 const throttleResized = () => {
@@ -328,6 +384,19 @@ const throttleResized = () => {
     clearTimeout( throttleResizeTimeout )
   }
   throttleResizeTimeout = setTimeout(onResized, 10)
+}
+
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
 
 

@@ -9,7 +9,7 @@ body {
 
   user-select: none;
   pointer-events: all;
-  cursor: pointer;
+  cursor: default;
   box-sizing: border-box;
 }
 
@@ -52,5 +52,5 @@ a, a:visited {
   color: #000;
 }
 a:hover {
-  color: #09f;
+  color: #00f;
 }

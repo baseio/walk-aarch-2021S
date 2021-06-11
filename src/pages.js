@@ -84,7 +84,7 @@ STAY ONLINE.
     <h2>Credits</h2>
 
     Thanks to<br />
-    <img src="assets/augustinus-fonden.png" />
+    <img src="/assets/augustinus-fonden.png" />
     <br />
 
     <strong>Curatorial Concept</strong>: Karen Kjaergaard, curator & Head of Exhibitions, AARCH 

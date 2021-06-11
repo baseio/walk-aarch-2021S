@@ -9,7 +9,7 @@ body {
   font-weight: 400;
   user-select: none;
   pointer-events: all;
-  cursor: pointer;
+  cursor: default;
   box-sizing: border-box;
 }
 * {
@@ -43,7 +43,7 @@ a:visited {
   color: #000;
 }
 a:hover {
-  color: #09f;
+  color: #00f;
 }
 
 /* src/fonts.css */
@@ -122,6 +122,7 @@ a:hover {
 /* src/styles.css */
 .logo {
   position: absolute;
+  top: 20px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -174,7 +175,7 @@ a:hover {
 }
 .copy {
   user-select: text;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 90px);
   overflow-y: auto;
   padding-right: 40px;
   font-size: 17px;
@@ -246,6 +247,8 @@ a:hover {
 .offgrid-spacer {
   margin: 0;
   border: none;
+  background-color: crimson;
+  color: coral;
 }
 .projects.online,
 .projects.offline {
@@ -263,16 +266,41 @@ a:hover {
 .project .project-image {
   width: inherit;
 }
-body.mobile {
-  background-color: lightcoral;
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.intro.done {
+  opacity: 0;
+}
+.intro.hidden {
+  opacity: 0;
+  display: none;
+}
+.intro > video {
+  height: 100%;
+}
+body.mobile .logo {
+  right: 17px;
 }
 body.mobile #app {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 20px);
   overflow-x: clip;
   overflow-y: scroll;
   margin-right: 5px;
+}
+body.ios #app {
+  height: calc(100vh - 150px);
 }
 body.mobile .menu {
   position: absolute;
@@ -280,7 +308,7 @@ body.mobile .menu {
   left: 0;
   right: 0;
   bottom: 0;
-  background: bisque;
+  background: #fff;
   text-align: end;
   padding-top: 70px;
   padding-right: 20px;
@@ -296,7 +324,7 @@ body.mobile .modetoggle {
   display: none;
 }
 body.mobile .content {
-  padding: 20px;
+  padding: 0px;
 }
 body.mobile .copy {
   padding-right: 20px;
@@ -309,6 +337,8 @@ body.mobile .copy[data-page=architects] {
   flex-direction: column;
 }
 body.mobile .copy[data-page=architects] a {
+  font-size: 17px;
+  line-height: 34px;
   width: 100%;
 }
 body.mobile .project {
@@ -331,4 +361,17 @@ body.mobile .projects.offline {
   width: calc(100vw - 10px);
   position: relative;
   left: -20px;
+}
+body.mobile .searchfield {
+  font-size: 18px;
+  border-radius: 0;
+}
+body.mobile .projects.search .project {
+  width: 100%;
+}
+body.mobile .projects.search .project-image {
+  width: 100px;
+}
+body.mobile .projects.search .project-meta {
+  width: 100vw;
 }
