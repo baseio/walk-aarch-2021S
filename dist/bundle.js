@@ -717,7 +717,6 @@ STAY ONLINE.
       const rh = Math.round(Math.random() * Math.random() * MAX);
       const n = document.createElement("div");
       n.classList = "offgrid-spacer";
-      n.innerHTML = `S${i} ${rh}`;
       n.style.height = `${rh}px`;
       el.insertBefore(n, el.firstChild);
     });

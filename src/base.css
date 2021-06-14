@@ -53,4 +53,5 @@ a, a:visited {
 }
 a:hover {
   color: #00f;
+  cursor: pointer;
 }
