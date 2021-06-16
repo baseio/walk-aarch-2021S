@@ -140,6 +140,7 @@ a:hover {
   grid-row-gap: 0px;
   margin: 20px;
   height: calc(100vh - 40px);
+  margin-right: 5px;
 }
 .themefilter {
   position: absolute;
@@ -181,7 +182,6 @@ a:hover {
   font-size: 17px;
   line-height: 170%;
   padding-right: 90px;
-  margin-right: -16px;
 }
 .copy > h2 {
   margin-top: 0;

@@ -26,7 +26,13 @@ const PAGES = {
 
   "rectors-speech": `
     <h2>Rector's Speech</h2>
-    TBA
+    
+    <div style="position:relative; overflow:hidden; padding-top:56.25%;">
+    <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://player.vimeo.com/video/562702105" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br />
+    <a href="https://vimeo.com/562702105/d27b25245a">Torben Nielsen - Afgangstale, Sommer 2021</a>
+
   `,
 
 
