@@ -63,9 +63,8 @@ const onHashChanged = () => {
     console.log('Mobile onHashChanged');
     const h2 = document.querySelector('.copy > h2')
     if( h2 ){
-      console.log('has h2');
+      // console.log('has h2');
       h2.addEventListener('click', () => {
-        console.log('h2 current:', modeToClass()  );
         nextMode()
         window.location.hash = ''
         
@@ -76,9 +75,12 @@ const onHashChanged = () => {
 
         onHashChanged()
 
-        render()
+        // render()
       })
     }
+
+    console.log('Mobile onHashChanged calling render()');
+    render()
   }
 
 }
@@ -221,6 +223,8 @@ const render_page = (page) => {
     html = PAGES[page]
     html = html.trim()
     html = nl2br(html)
+    html += '<br />'
+    html += '<br />'
   }
 
   document.querySelector('.copy').setAttribute('data-page', page)
@@ -246,7 +250,7 @@ const render_search = () => {
 }
 
 const render_projects = (show=true) => {
-  console.log('render_projects', isMobile);
+  console.log('render_projects isMobile:', isMobile, 'MODE:', MODE);
 
   const isSearch = SEARCH_STRING != '';
 
@@ -318,6 +322,8 @@ const render = () => {
   cleanupOffgrid('.projects')
 
   const className = modeToClass()
+
+  console.log('render', MODE, className);
 
   // fullwidth views
   if( className === 'online' || className === 'offline' ){

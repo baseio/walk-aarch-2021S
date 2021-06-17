@@ -61,6 +61,8 @@ export const buildMenu = () => {
 	document.querySelectorAll(selector + ` [data-menu-action="go"]`).forEach( el => {
 		el.addEventListener('click', () => {
 
+			console.log('menu clicked ', `#${ el.getAttribute('data-menu-key') }`);
+
 			// unselect others, select self
 			document.querySelectorAll(selector +' .selected').forEach(el => el.classList.remove('selected'));
 			el.classList.add('selected');
@@ -75,11 +77,11 @@ export const buildMenu = () => {
 				document.querySelectorAll(selector +' .grpc.open').forEach(el => el.classList.remove('open'));
 			}
 
-			// if( window.location.hash === `#${ el.getAttribute('data-menu-key') }` ){
-			// 	window.location.hash = '';
-			// }else{
-			// 	window.location.hash = `#${ el.getAttribute('data-menu-key') }`	
-			// }
+			if( window.location.hash === `#${ el.getAttribute('data-menu-key') }` ){
+				window.location.hash = '';
+			}else{
+				window.location.hash = `#${ el.getAttribute('data-menu-key') }`	
+			}
 
 			window.location.hash = `#${ el.getAttribute('data-menu-key') }`
 		})

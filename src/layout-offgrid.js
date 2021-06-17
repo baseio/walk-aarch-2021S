@@ -1,5 +1,7 @@
 const cleanupOffgrid = (selector) => {
 
+  console.log('cleanupOffgrid (actual)');
+
   document.querySelectorAll(`${selector} .offgrid-spacer`).forEach( s => s.remove() )
 
   const els = document.querySelectorAll(`${selector} .project`);
@@ -17,7 +19,7 @@ let MINV = 0;
 
 const renderOffgrid = (selector, data) => {
 
-  console.log('renderOffgrid');
+  console.log('renderOffgrid (actual)');
 // return
 
   const root = document.querySelector(`${selector}`) 

@@ -7,7 +7,7 @@
     font-weight: 400;
     font-display: swap;
 }
-
+/*
 @font-face {
     font-family: 'Univers LT W02 65 Bold';
     src: url("fonts/3145f7f3-577b-4fc5-b041-fd8a5b0b2d40.woff") format("woff");
@@ -32,15 +32,6 @@
     font-display: swap;
 }
 
-/*
-body {
-	font: 13px/1.65em "Univers LT W02 55 Roman", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6,a {
-	font-family: "Univers LT W02 67 Bold Cn";
-}*/
-
 .light_100 {
     font-family: "Univers LT W02 45 Light";
     font-weight: 100;
@@ -60,3 +51,5 @@ h1,h2,h3,h4,h5,h6,a {
     font-family: "Univers LT W02 67 Bold Cn";
     font-weight: 700;
 }
+
+*/
