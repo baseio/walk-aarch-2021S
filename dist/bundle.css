@@ -224,6 +224,7 @@ body {
 }
 .projects.offline {
   background-color: #000;
+  margin-bottom: 50px;
 }
 .projects.offline > * {
   display: none;
