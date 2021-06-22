@@ -278,7 +278,7 @@ const render_projects = (show=true) => {
       const match = search.indexOf(SEARCH_STRING) > -1
 
       if( match ){
-        html += `<div class="project">
+        html += `<div class="project" data-url="${s.slug}">
           <img class="project-image" src="images/${s.id}.jpg" alt="${s.title}"/>
           <div class="project-meta"><strong>${s.name}</strong><br />
             <div class="project-title">${s.title}</div>

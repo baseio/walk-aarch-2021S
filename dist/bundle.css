@@ -5,7 +5,13 @@ body {
   padding: 0;
   overflow: hidden;
   color: #000;
-  font: 13px/1.65em "Univers LT W02 55 Roman", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:
+    13px/1.65em "Univers LT W02 55 Roman",
+    "HelveticaNeue",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
   font-weight: 400;
   user-select: none;
   pointer-events: all;
@@ -47,15 +53,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* src/fonts.css */
-@font-face {
-  font-family: "Univers LT W02 55 Roman";
-  src: url(fonts/4d1e8df3-6c45-428d-a522-84c8a6a4e533.woff) format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 /* src/menu.css */
 .menu {
   font-size: 30px;
@@ -80,6 +77,22 @@ a:hover {
   height: unset;
   overflow: unset;
   margin: 30px 0px;
+}
+
+/* src/fonts.css */
+@font-face {
+  font-family: "Univers LT W02 55 Roman";
+  src: url(fonts/4d1e8df3-6c45-428d-a522-84c8a6a4e533.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Univers LT W02 65 Bold";
+  src: url(fonts/3145f7f3-577b-4fc5-b041-fd8a5b0b2d40.woff) format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
 /* src/styles.css */
@@ -160,6 +173,12 @@ body {
 }
 .copy > img {
   width: 230px;
+}
+.copy[data-page=curators-voice] > img {
+  width: 33vw;
+}
+.copy strong {
+  font-weight: 700;
 }
 .modetoggle {
   display: flex;

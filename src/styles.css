@@ -95,6 +95,13 @@ body {
 .copy > img {
   width: 230px;
 }
+.copy[data-page="curators-voice"] > img {
+  width: 33vw;
+}
+
+.copy strong {
+  font-weight: 700;
+}
 
 .modetoggle {
   display: flex;

@@ -1,11 +1,11 @@
 {
   "name": "walk-aarch-2021S",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "watchexec --exts js,css,html -i *bundle* npm run build",
-    "serve": "cd dist && here",
+    "serve": "http-server ./dist",
     "build": "esbuild src/index.js --target=es2016 --external:fonts/* --external:assets/* --bundle --outfile=./dist/bundle.js",
     "release": "npm run bumpversion && terser ./dist/bundle.js --comments -c drop_console=true -m -o ./dist/bundle.js",
     "upload": "rsync -avz --exclude \".DS_Store\" -e \"ssh -i $HOME/.ssh/ds_rsa\" ./dist/* dearstudio@pa.aarch.dk:/var/www/onoff.aarch.dk/html",
@@ -18,5 +18,9 @@
     "@theo.gravity/version-bump": "^2.0.14",
     "stupid-sheets": "0.0.3",
     "terser": "^5.7.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.12.9",
+    "http-server": "^0.12.3"
   }
 }
