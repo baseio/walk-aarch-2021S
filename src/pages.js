@@ -1,7 +1,7 @@
 const PAGES = {
 
   "ongrid": `
-    <h2>ON-GRID</h2>
+    <h2>ONGRID</h2>
     When you are on-grid you are connected to a central computer, a server, or the internet, being part of a larger system where data and people connect but also expose themselves to everybody else on the grid.  
   `,
 
@@ -19,7 +19,7 @@ const PAGES = {
 
 
   "offgrid": `
-    <h2>OFF-GRID</h2>
+    <h2>OFFGRID</h2>
     Being off-grid means you are not connected in any way to or dependent on a network. But ‘off-grid’ is also used to characterize a building or a lifestyle that allows people to be self-sufficient in order to reduce environmental impact and the cost of living. When you go off-grid you disconnect from the system in favour of so-called simple living or living without leaving a trace.
   `,
 

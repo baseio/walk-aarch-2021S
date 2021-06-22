@@ -109,7 +109,22 @@ body {
   font-size: 25px;
   line-height: 100%;
   cursor: pointer;
+  position: relative;
 }
+.modetoggle > div {
+  position: absolute;
+  top: -40px;
+  font-size: 14px;
+}
+
+.modetoggle span {
+  border: 2px solid #000;
+  color: #00F;
+  padding: 7px 17px;
+  border-radius: 14px;
+}
+
+
 
 .copy[data-page="architects"] a {
   text-decoration: none;
