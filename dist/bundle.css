@@ -217,6 +217,7 @@ body {
   align-items: flex-end;
   overflow-y: hidden;
   overflow-x: scroll;
+  margin-bottom: 50px;
 }
 .projects.online::-webkit-scrollbar {
   height: 11px;
