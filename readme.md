@@ -5,3 +5,13 @@ Summer graduation, 2021
 ## deps
 
 `brew install watchexec`
+
+test3
+
+
+## todo
+- [ ] team feedback
+- [ ] browser tests
+- [ ] analytics: await Lars
+- [ ] rectors speech @friday
+- [ ] prizes @post-launch
