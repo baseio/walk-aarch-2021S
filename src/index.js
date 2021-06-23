@@ -304,7 +304,9 @@ const render_projects = (show=true) => {
 
   document.querySelectorAll('.project').forEach( el => {
     el.addEventListener('click', () => {
-      document.location.href = el.getAttribute('data-url')
+      // document.location.href = el.getAttribute('data-url')
+      // document.location.href = el.getAttribute('data-url')
+      window.open( el.getAttribute('data-url') )
     })
   })
 }
