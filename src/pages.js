@@ -75,9 +75,34 @@ So although the pandemic has changed the way we live, work and socialize, to the
 
 
   "prizes": `
-    <h2>Prizes</h2>
+<h2>Prizes</h2>
+<br />
+<strong>VOLA’s rejselegater</strong><br />
+<strong>Brief grounds for <a href="https://afgang.aarch.dk/2021/student/william-reeve/" target="_blank">William Stanley Reeve</a>’s project</strong>: 
+Collective production of housing is explored through multitude vantage points, oscillating between the scales of architectural detail and social group dynamics. As a result, the project offers a convincing proposition about architecture’s departure from the building-object as its key concern, and seeks ways of engaging with systemic aspects of material circulation, knowledge sharing, decentralised models of design and development. While working with tried and tested themes, such as collectivity, flexibility, and circularity in housing, the project nonetheless manages to bring new energy in addressing these issues, and successfully bridges the gap between larger socioeconomic concerns and the architectural detail. Furthermore, the Grant Committee would like to commend the rigour evident in project’s documentation. The approach to architectural representation resonates with a multitude of references, spanning from pop art to corporate brochure graphics, all of which have been deployed with the utmost sense of balance and purpose.
+As the Grant Committee, we recommend William Stanley Reeve’s project for the VOLA scholarship.
+ 
+<strong>Brief grounds for <a href="https://afgang.aarch.dk/2021/student/signe-ravnholt/" target="_blank">Signe Sønderby Ravnh</a>’s project</strong>: 
+Signe’s project focuses on an important, challenging theme and environment -an industrial ruin in a polluted site-, and manages to present a convincing, brave and delicate proposal for a habitat regeneration in Harboøre Tange. The choice of a difficult topic -how to heal an ecosystem through an architectural intervention- and the tacit statement of what an architect’s task can be about -nurturing life instead of destroying it- is an example of how younger architects might bring much needed solutions to today’s challenges. The committee values both the relevance of the theme, the carefulness and sensitivity with which Signe has faced it, the rigour of her concrete architectural ideas, and their communication in evocative and precise drawings.
+As the Grant Committee, we recommend Signe Sønderby Ravnh’s project for the VOLA scholarship.
+<br />
+<strong>3XN rejselegat</strong>
 
-    TBA
+The winning project investigates the social and cultural problems foreign workers in the fishery industry face when coming to Norway. On a broader scale, the project highlights how global economic interests challenge our human values, and at the human scale, it solves a specific problem of housing foreign workers in a climate of extreme weather. The project is investigating a connection between the fishing industry and commercial leisure industry and observes the migration in between the two industries in connection to nature ́s migration between fish and birds, and creates a proposal that integrates a commercial solution for both.
+
+The project cleverly analyzes three themes: the social, the economic, and the tectonic. In the social aspect, the build- ing creates a comfortable dwelling and facilitates meetings between workers. In the economic aspect, the building adapts to the industry and season – it’s a home for the workers in winter and a place for tourists in the summer. The tectonic aspect takes into consideration flexibility, adapting to the climate and building conditions with prefab- ricated elements. Not only taking an industrial viewpoint but also creating very poetic and refined subtle solutions in a rough environment.
+
+This year’s 3XN Travel Grant is awarded to a student who focuses on human behavior towards unequal living condi- tions while illustrating how architects play a vital role in shaping living conditions for versatile and contradictive purposes and showing a solution to shape the physical conditions that encourage social interaction between the inhabitants. In suggesting a set of solutions that incorpo- rate co-existing between the worker and the tourist, the project underlines how architects can design flexible hous- ing solutions that can help solve current political issues in remote areas of the world.
+
+This year’s 3XN Travel Grant goes to <a href="https://afgang.aarch.dk/2021/student/ulrikke-eliassen/" target="_blank">Ulrikke Eliassen</a>.
+<br />
+<strong>CEBRAprisen</strong>
+
+Projektet <strong>WHERE LIGHT & DARKNESS MINGLE</strong> udforsker det dynamiske felt mellem de faste og foranderlige kvaliteter på tre specifikke steder på Island.
+Titlen refererer til den korte periode i skumringen, hvor lyset og farvenes skift fuldstændigt forandrer stedernes karakter. Lysets foranderlighed sammenstilles med kvaliteten af vulkanske sten i undergrunden. Den materielle karakteristik af sten og lys overlejres med åndelige oplevelser af stederne og korlægges i poetiske montager og tegninger, som trækker på teknikker fra både arkitektur, kunst og kartografi. 
+Projektet får sit stærke kunstneriske brændstof fra en accept og dyrkelse af stedernes komplekse og udefinerbare karakter. Frem for at sortere og skabe en klar orden i oplevelsen, styrkes det polyvalente og foranderlige gennem arkitekturen, som samtidig skaber et smukt, klart opfatteligt og brugbart sted. 
+For modet til at udforske det komplekse, udefinerbare og foranderlige - og den poetiske styrke og skønhed i både analyse, illustrationer og arkitektur - tildeles <a href="https://afgang.aarch.dk/2021/student/hafdis-anna-bragadottir/" target="_blank">Hafdís Anna Bragadóttir</a> CEBRA prisen 2021. 
+
   `,
 
 
