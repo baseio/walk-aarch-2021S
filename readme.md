@@ -6,7 +6,7 @@ Summer graduation, 2021
 
 `brew install watchexec`
 
-test4
+ssh -i $HOME/.ssh/ds_rsa dearstudio@pa.aarch.dk
 
 
 ## todo
